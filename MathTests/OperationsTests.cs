@@ -116,26 +116,26 @@ namespace MathTests
         }
 
         [TestMethod]
-        public void Square()
+        public void Power()
         {
             MathLib lib = new MathLib();
 
-            Assert.AreEqual(8, lib.Square(2, 3));
-            Assert.AreEqual(-8, lib.Square(-2, 3));
-            Assert.AreEqual(4, lib.Square(-2, 2));
-            Assert.AreEqual(5712003.219749941009, lib.Square(13.37, 6));
-            Assert.AreEqual(406671.383849472, lib.Square(4.2, 9));
-            Assert.AreEqual(1, lib.Square(0, 0));
-            Assert.AreEqual(0, lib.Square(0, 1));
+            Assert.AreEqual(8, lib.Power(2, 3));
+            Assert.AreEqual(-8, lib.Power(-2, 3));
+            Assert.AreEqual(4, lib.Power(-2, 2));
+            Assert.AreEqual(5712003.219749941009, lib.Power(13.37, 6));
+            Assert.AreEqual(406671.383849472, lib.Power(4.2, 9));
+            Assert.AreEqual(1, lib.Power(0, 0));
+            Assert.AreEqual(0, lib.Power(0, 1));
 
             for (int i = -50; i < 50; i++)
             {
                 if(i < 0)
                 {
-                    Assert.AreEqual(-1, lib.Square(i, 0));
+                    Assert.AreEqual(-1, lib.Power(i, 0));
                 } else
                 {
-                    Assert.AreEqual(1, lib.Square(i, 0));
+                    Assert.AreEqual(1, lib.Power(i, 0));
                 }
             }
         }
@@ -153,7 +153,7 @@ namespace MathTests
             {
                 if(i % 2 == 0)
                 {
-                    Assert.ThrowsException<ArithmeticException>(() => lib.Root(-1, i), "Invalid square root!");
+                    Assert.ThrowsException<ArithmeticException>(() => lib.Root(-1, i), "Invalid root!");
                 } else
                 {
                     Assert.AreEqual(-1, lib.Root(-1, i));
