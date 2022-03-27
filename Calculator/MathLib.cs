@@ -40,7 +40,7 @@ namespace Calculator
             return 0;
         }
 
-        public double Square(double x, int exponent)
+        public double Power(double x, int exponent)
         {
             return 0;
         }
