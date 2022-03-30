@@ -35,7 +35,7 @@ namespace MathTests
             Assert.AreEqual(0, MathLib.Add(69, -69));
             Assert.AreEqual(0, MathLib.Add(-69, 69));
             
-            Assert.ThrowsException<OverflowException>(() => lib.Add(long.MaxValue, long.MaxValue), "Overflow occured!");
+            Assert.ThrowsException<OverflowException>(() => MathLib.Add(long.MaxValue, long.MaxValue), "Overflow occured!");
         }
 
         [TestMethod]
@@ -53,7 +53,7 @@ namespace MathTests
             Assert.AreNotEqual(0, MathLib.Substract(420, -420));
             Assert.AreEqual(0, MathLib.Substract(long.MaxValue, long.MaxValue));
 
-            Assert.ThrowsException<OverflowException>(() => lib.Substract(long.MinValue, long.MaxValue), "Overflow occured!");
+            Assert.ThrowsException<OverflowException>(() => MathLib.Substract(long.MinValue, long.MaxValue), "Overflow occured!");
         }
 
         [TestMethod]
@@ -113,10 +113,10 @@ namespace MathTests
                 Assert.AreEqual(factorials[i], MathLib.Factorial(i));
             }
 
-            Assert.AreEqual(ParseExtended("4.02387260077093773543702433923e2567"), lib.Factorial(1000));
-            Assert.AreEqual(ParseExtended("3.3162750924506332411753933805763e5735"), lib.Factorial(2000));
-            Assert.AreEqual(ParseExtended("4.1493596034378540855568670930866e9130"), lib.Factorial(3000));
-            Assert.AreEqual(ParseExtended("1.9736342530860425312047080034031e9997"), lib.Factorial(3248));
+            Assert.AreEqual(ParseExtended("4.02387260077093773543702433923e2567"), MathLib.Factorial(1000));
+            Assert.AreEqual(ParseExtended("3.3162750924506332411753933805763e5735"), MathLib.Factorial(2000));
+            Assert.AreEqual(ParseExtended("4.1493596034378540855568670930866e9130"), MathLib.Factorial(3000));
+            Assert.AreEqual(ParseExtended("1.9736342530860425312047080034031e9997"), MathLib.Factorial(3248));
 
             Assert.ThrowsException<OverflowException>(() => MathLib.Factorial(3249), "Overflow occured!");
         }
