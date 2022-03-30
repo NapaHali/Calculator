@@ -8,6 +8,24 @@ namespace MathTests
     [TestClass]
     public class OperationsTests
     {
+        public static (decimal multiplier, int exponent) Decompose(string value)
+        {
+            var split = value.Split('e');
+            return (decimal.Parse(split[0]), int.Parse(split[1]));
+        }
+        public static int GetDecimalPlaces(decimal value)
+           => BitConverter.GetBytes(decimal.GetBits(value)[3])[2];
+
+        public static BigInteger ParseExtended(string value)
+        {
+            var (multiplier, exponent) = Decompose(value);
+
+            var decimalPlaces = GetDecimalPlaces(multiplier);
+            var power = (int)Math.Pow(10, decimalPlaces);
+
+            return (BigInteger.Pow(10, exponent) * (int)(multiplier * power)) / power;
+        }
+
         [TestMethod]
         public void Add()
         {
@@ -16,14 +34,11 @@ namespace MathTests
             Assert.AreEqual(2, lib.Add(1, 1));
 
             Assert.AreEqual(420.69, lib.Add(420, 0.69));
-            Assert.AreEqual(-1337.000000001, lib.Add(-420000.987654321, 418663.98765432));
-            Assert.AreEqual(-1337.000000001, lib.Add(-420000.987654321, 418663.987654320));
-            Assert.AreNotEqual(-1337.000000001, lib.Add(-420000.987654321, 418663.987654301));
-
-            Assert.ThrowsException<OverflowException>(() => lib.Add(long.MaxValue, long.MaxValue), "Overflow occured!");
-
+            Assert.AreEqual(-1337.000001, lib.Add(-4200.987654, 2863.987653));
             Assert.AreEqual(0, lib.Add(69, -69));
             Assert.AreEqual(0, lib.Add(-69, 69));
+            
+            Assert.ThrowsException<OverflowException>(() => lib.Add(long.MaxValue, long.MaxValue), "Overflow occured!");
         }
 
         [TestMethod]
@@ -37,13 +52,13 @@ namespace MathTests
 
             Assert.AreEqual(420.69, lib.Substract(1024.1234, 603.4334));
             Assert.AreNotEqual(420.69, lib.Substract(1024.1234, 603.4434));
-            Assert.AreEqual(-1337.000000001, lib.Substract(69420.123456789, 68083.123456788));
-
-            Assert.AreEqual(0, lib.Substract(long.MaxValue, long.MaxValue));
-            Assert.ThrowsException<OverflowException>(() => lib.Substract(long.MinValue, long.MaxValue), "Overflow occured!");
+            Assert.AreEqual(1337.000001, lib.Substract(69420.1234567, 68083.1234566));
 
             Assert.AreEqual(0, lib.Substract(420, 420));
             Assert.AreNotEqual(0, lib.Substract(420, -420));
+            Assert.AreEqual(0, lib.Substract(long.MaxValue, long.MaxValue));
+
+            Assert.ThrowsException<OverflowException>(() => lib.Substract(long.MinValue, long.MaxValue), "Overflow occured!");
         }
 
         [TestMethod]
@@ -65,7 +80,7 @@ namespace MathTests
             Assert.AreEqual(-1073741824, lib.Multiply(short.MinValue, short.MaxValue));
 
             Assert.AreEqual(29299.0698, lib.Multiply(69.69, 420.420));
-            Assert.AreEqual(-1789054.677486701112635269, lib.Multiply(1337.123456789, -1337.987654321));
+            Assert.AreEqual(-1789054.67733954, lib.Multiply(1337.123456789, -1337.987654321));
             Assert.AreNotEqual(-1, lib.Multiply(-1, -1));
         }
 
@@ -84,16 +99,19 @@ namespace MathTests
                 i++;
             }
 
-            Assert.AreEqual(0.16501461884047636026527847108322, lib.Divide(69.42, 420.69));
-            Assert.AreEqual(6.0600691443388072601555747623163, lib.Divide(420.69, 69.42));
-            Assert.AreEqual(-6.0600691443388072601555747623163, lib.Divide(420.69, -69.42));
-            Assert.AreNotEqual(6.0600691443388072601555747623163, lib.Divide(-420.69, 69.42));
+            Assert.AreEqual(0.165014618840476, lib.Divide(69.42, 420.69));
+            Assert.AreEqual(6.06006914433881, lib.Divide(420.69, 69.42));
+            Assert.AreEqual(-6.06006914433881, lib.Divide(420.69, -69.42));
+            Assert.AreNotEqual(6.06006914433881, lib.Divide(-420.69, 69.42));
+            Assert.AreEqual(6.06006914433881, lib.Divide(-420.69, -69.42));
         }
 
         [TestMethod]
         public void Factorial()
         {
             MathLib lib = new MathLib();
+           
+            Assert.AreNotEqual(5, lib.Factorial(3));
 
             BigInteger[] factorials = { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 
                 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000, BigInteger.Parse("51090942171709440000"),
@@ -106,11 +124,10 @@ namespace MathTests
                 Assert.AreEqual(factorials[i], lib.Factorial(i));
             }
 
-            Assert.AreEqual(BigInteger.Parse("4.02387260077093773543702433923E+2567"), lib.Factorial(1000));
-            Assert.AreEqual(BigInteger.Parse("3.3162750924506332411753933805763E+5735"), lib.Factorial(2000));
-            Assert.AreEqual(BigInteger.Parse("4.1493596034378540855568670930866E+9130"), lib.Factorial(3000));
-            Assert.AreEqual(BigInteger.Parse("1.9736342530860425312047080034031E+9997"), lib.Factorial(3248));
-            Assert.AreNotEqual(5, lib.Factorial(3));
+            Assert.AreEqual(ParseExtended("4.02387260077093773543702433923e2567"), lib.Factorial(1000));
+            Assert.AreEqual(ParseExtended("3.3162750924506332411753933805763e5735"), lib.Factorial(2000));
+            Assert.AreEqual(ParseExtended("4.1493596034378540855568670930866e9130"), lib.Factorial(3000));
+            Assert.AreEqual(ParseExtended("1.9736342530860425312047080034031e9997"), lib.Factorial(3248));
 
             Assert.ThrowsException<OverflowException>(() => lib.Factorial(3249), "Overflow occured!");
         }
@@ -123,7 +140,7 @@ namespace MathTests
             Assert.AreEqual(8, lib.Power(2, 3));
             Assert.AreEqual(-8, lib.Power(-2, 3));
             Assert.AreEqual(4, lib.Power(-2, 2));
-            Assert.AreEqual(5712003.219749941009, lib.Power(13.37, 6));
+            Assert.AreEqual(5712003.21974994, lib.Power(13.37, 6));
             Assert.AreEqual(406671.383849472, lib.Power(4.2, 9));
             Assert.AreEqual(1, lib.Power(0, 0));
             Assert.AreEqual(0, lib.Power(0, 1));
@@ -147,7 +164,7 @@ namespace MathTests
 
             Assert.AreEqual(2, lib.Root(4, 2));
             Assert.AreEqual(2, lib.Root(8, 3));
-            Assert.AreEqual(-1.2599210498949, lib.Root(-2, 3));
+            Assert.AreEqual(-1.25992104989487, lib.Root(-2, 3));
             Assert.AreEqual(-1.5157165665104, lib.Root(-8, 5));
             for (int i = 0; i < 8; i++)
             {
@@ -175,7 +192,12 @@ namespace MathTests
                 Assert.AreNotEqual(-i, lib.Abs(i));
             }
 
-            for (int i = -50; i < 50; i++)
+            for (int i = -50; i < 0; i++)
+            {
+                Assert.AreEqual(-i, lib.Abs(i));
+            }
+
+            for (int i = 0; i < 50; i++)
             {
                 Assert.AreEqual(i, lib.Abs(i));
             }
