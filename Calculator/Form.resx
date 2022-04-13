@@ -118,6 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="plus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="plus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="plus.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -132,12 +139,11 @@
     <value>NoControl</value>
   </data>
   <data name="plus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 511</value>
+    <value>364, 511</value>
   </data>
   <data name="plus.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="plus.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
@@ -156,6 +162,12 @@
   <data name="&gt;&gt;plus.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="dot.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dot.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="dot.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -169,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="dot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 511</value>
+    <value>245, 511</value>
   </data>
   <data name="dot.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
@@ -192,41 +204,50 @@
   <data name="&gt;&gt;dot.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="b_0.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b0.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b0.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b0.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_0.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_0.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b0.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 511</value>
   </data>
-  <data name="b_0.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="b_0.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b0.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 78</value>
   </data>
-  <data name="b_0.TabIndex" type="System.Int32, mscorlib">
+  <data name="b0.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
-  <data name="b_0.Text" xml:space="preserve">
+  <data name="b0.Text" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;b_0.Name" xml:space="preserve">
-    <value>b_0</value>
+  <data name="&gt;&gt;b0.Name" xml:space="preserve">
+    <value>b0</value>
   </data>
-  <data name="&gt;&gt;b_0.Type" xml:space="preserve">
+  <data name="&gt;&gt;b0.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_0.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b0.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_0.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b0.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="equals.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="equals.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="equals.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -241,7 +262,7 @@
     <value>NoControl</value>
   </data>
   <data name="equals.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 427</value>
+    <value>483, 427</value>
   </data>
   <data name="equals.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 162</value>
@@ -264,6 +285,12 @@
   <data name="&gt;&gt;equals.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="minus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="minus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="minus.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -277,7 +304,7 @@
     <value>NoControl</value>
   </data>
   <data name="minus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 427</value>
+    <value>364, 427</value>
   </data>
   <data name="minus.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
@@ -300,149 +327,176 @@
   <data name="&gt;&gt;minus.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="b_3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="b3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="b_3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b3.Location" type="System.Drawing.Point, System.Drawing">
     <value>245, 427</value>
   </data>
-  <data name="b_3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b3.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_3.TabIndex" type="System.Int32, mscorlib">
+  <data name="b3.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
-  <data name="b_3.Text" xml:space="preserve">
+  <data name="b3.Text" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;b_3.Name" xml:space="preserve">
-    <value>b_3</value>
+  <data name="&gt;&gt;b3.Name" xml:space="preserve">
+    <value>b3</value>
   </data>
-  <data name="&gt;&gt;b_3.Type" xml:space="preserve">
+  <data name="&gt;&gt;b3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b3.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="b_2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="b2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="b_2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b2.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 427</value>
   </data>
-  <data name="b_2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b2.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_2.TabIndex" type="System.Int32, mscorlib">
+  <data name="b2.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="b_2.Text" xml:space="preserve">
+  <data name="b2.Text" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;b_2.Name" xml:space="preserve">
-    <value>b_2</value>
+  <data name="&gt;&gt;b2.Name" xml:space="preserve">
+    <value>b2</value>
   </data>
-  <data name="&gt;&gt;b_2.Type" xml:space="preserve">
+  <data name="&gt;&gt;b2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b2.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="b_1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="b_1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt, style=Bold</value>
-  </data>
-  <data name="b_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="b_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 427</value>
-  </data>
-  <data name="b_1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="b_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 78</value>
-  </data>
-  <data name="b_1.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="b_1.Text" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;b_1.Name" xml:space="preserve">
-    <value>b_1</value>
-  </data>
-  <data name="&gt;&gt;b_1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;b_1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;b_1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="absolut.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="b1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="absolut.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="absolut.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="absolut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="absolut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 343</value>
+  <data name="b1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 425</value>
   </data>
-  <data name="absolut.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b1.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="absolut.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
+  <data name="b1.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
   </data>
-  <data name="absolut.Text" xml:space="preserve">
-    <value>|x|</value>
+  <data name="b1.Text" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;absolut.Name" xml:space="preserve">
-    <value>absolut</value>
+  <data name="&gt;&gt;b1.Name" xml:space="preserve">
+    <value>b1</value>
   </data>
-  <data name="&gt;&gt;absolut.Type" xml:space="preserve">
+  <data name="&gt;&gt;b1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;absolut.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;absolut.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="abs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="abs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="abs.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="abs.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="abs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt, style=Bold</value>
+  </data>
+  <data name="abs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="abs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 343</value>
+  </data>
+  <data name="abs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
+  </data>
+  <data name="abs.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="abs.Text" xml:space="preserve">
+    <value>|x|</value>
+  </data>
+  <data name="&gt;&gt;abs.Name" xml:space="preserve">
+    <value>abs</value>
+  </data>
+  <data name="&gt;&gt;abs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;abs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;abs.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="multiply.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="multiply.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="multiply.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -457,7 +511,7 @@
     <value>NoControl</value>
   </data>
   <data name="multiply.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 343</value>
+    <value>364, 343</value>
   </data>
   <data name="multiply.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
@@ -480,118 +534,139 @@
   <data name="&gt;&gt;multiply.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="b_6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="b6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="b_6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_6.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 343</value>
+  <data name="b6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 343</value>
   </data>
-  <data name="b_6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b6.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_6.TabIndex" type="System.Int32, mscorlib">
+  <data name="b6.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="b_6.Text" xml:space="preserve">
+  <data name="b6.Text" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;b_6.Name" xml:space="preserve">
-    <value>b_6</value>
+  <data name="&gt;&gt;b6.Name" xml:space="preserve">
+    <value>b6</value>
   </data>
-  <data name="&gt;&gt;b_6.Type" xml:space="preserve">
+  <data name="&gt;&gt;b6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b6.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="b_5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="b5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="b_5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b5.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 343</value>
   </data>
-  <data name="b_5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b5.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_5.TabIndex" type="System.Int32, mscorlib">
+  <data name="b5.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="b_5.Text" xml:space="preserve">
+  <data name="b5.Text" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;b_5.Name" xml:space="preserve">
-    <value>b_5</value>
+  <data name="&gt;&gt;b5.Name" xml:space="preserve">
+    <value>b5</value>
   </data>
-  <data name="&gt;&gt;b_5.Type" xml:space="preserve">
+  <data name="&gt;&gt;b5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b5.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="b_4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b4.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 343</value>
   </data>
-  <data name="b_4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="b_4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b4.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_4.TabIndex" type="System.Int32, mscorlib">
+  <data name="b4.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="b_4.Text" xml:space="preserve">
+  <data name="b4.Text" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;b_4.Name" xml:space="preserve">
-    <value>b_4</value>
+  <data name="&gt;&gt;b4.Name" xml:space="preserve">
+    <value>b4</value>
   </data>
-  <data name="&gt;&gt;b_4.Type" xml:space="preserve">
+  <data name="&gt;&gt;b4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b4.ZOrder" xml:space="preserve">
     <value>16</value>
+  </data>
+  <data name="power.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="power.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="power.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA88AAALhCAYAAABhWpYxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAA7
-        fQAAO30BRRL02QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC3NSURBVHhe7d0H
+        fAAAO3wBl1UWPQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC3NSURBVHhe7d0H
         2GxXWTZgzzlppIcQAqFDIBQpAfLTi/QOirFFBOlNAUGK+mNQkKCABgUFBQQUMSBFUISIoBTz00F6k0AI
         PYH0zv+svV8khpyctmdmzcx9X9dzxfN98+317rWOXOs9M99ePwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -803,7 +878,7 @@
     <value>NoControl</value>
   </data>
   <data name="power.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 259</value>
+    <value>483, 259</value>
   </data>
   <data name="power.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
@@ -823,6 +898,12 @@
   <data name="&gt;&gt;power.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <data name="divide.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="divide.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="divide.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -836,7 +917,7 @@
     <value>NoControl</value>
   </data>
   <data name="divide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 259</value>
+    <value>364, 259</value>
   </data>
   <data name="divide.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
@@ -859,118 +940,139 @@
   <data name="&gt;&gt;divide.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="b_9.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="b9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="b_9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b9.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b9.Location" type="System.Drawing.Point, System.Drawing">
     <value>245, 259</value>
   </data>
-  <data name="b_9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b9.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_9.TabIndex" type="System.Int32, mscorlib">
+  <data name="b9.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="b_9.Text" xml:space="preserve">
+  <data name="b9.Text" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;b_9.Name" xml:space="preserve">
-    <value>b_9</value>
+  <data name="&gt;&gt;b9.Name" xml:space="preserve">
+    <value>b9</value>
   </data>
-  <data name="&gt;&gt;b_9.Type" xml:space="preserve">
+  <data name="&gt;&gt;b9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b9.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b9.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="b_8.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="b8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="b_8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b8.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_8.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b8.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 259</value>
   </data>
-  <data name="b_8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b8.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_8.TabIndex" type="System.Int32, mscorlib">
+  <data name="b8.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="b_8.Text" xml:space="preserve">
+  <data name="b8.Text" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;b_8.Name" xml:space="preserve">
-    <value>b_8</value>
+  <data name="&gt;&gt;b8.Name" xml:space="preserve">
+    <value>b8</value>
   </data>
-  <data name="&gt;&gt;b_8.Type" xml:space="preserve">
+  <data name="&gt;&gt;b8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b8.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b8.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="b_7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="b7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="b7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="b7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="b_7.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="b7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
-  <data name="b_7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="b7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="b_7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="b7.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 259</value>
   </data>
-  <data name="b_7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="b_7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="b7.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="b_7.TabIndex" type="System.Int32, mscorlib">
+  <data name="b7.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="b_7.Text" xml:space="preserve">
+  <data name="b7.Text" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;b_7.Name" xml:space="preserve">
-    <value>b_7</value>
+  <data name="&gt;&gt;b7.Name" xml:space="preserve">
+    <value>b7</value>
   </data>
-  <data name="&gt;&gt;b_7.Type" xml:space="preserve">
+  <data name="&gt;&gt;b7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;b_7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;b7.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;b_7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;b7.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="square_root.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="root.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="root.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="root.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA0sAAAJ2CAYAAACO1xmxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAA7
-        fQAAO30BRRL02QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACw2SURBVHhe7d0H
+        fAAAO3wBl1UWPQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACw2SURBVHhe7d0H
         vCVnWT9wd9NISEISEAhSTELvXVCpgtIColSRDqEK0owK/iEUjQiCqBQhIiBdQCkRRCCCoIBI7x0CAaQE
         MISEAP/fO/OAy7K7uefec2bmnPP9fj6/D7v3npn3mfcN9zyz98zMzwAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1162,38 +1264,44 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDx/czP/H+Qx/kFFLiJ5AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="square_root.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="root.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="square_root.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="root.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="square_root.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="root.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 13.8pt, style=Bold</value>
   </data>
-  <data name="square_root.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="root.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="square_root.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 175</value>
+  <data name="root.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 175</value>
   </data>
-  <data name="square_root.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="root.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
   </data>
-  <data name="square_root.TabIndex" type="System.Int32, mscorlib">
+  <data name="root.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="&gt;&gt;square_root.Name" xml:space="preserve">
-    <value>square_root</value>
+  <data name="&gt;&gt;root.Name" xml:space="preserve">
+    <value>root</value>
   </data>
-  <data name="&gt;&gt;square_root.Type" xml:space="preserve">
+  <data name="&gt;&gt;root.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;square_root.Parent" xml:space="preserve">
+  <data name="&gt;&gt;root.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;square_root.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;root.ZOrder" xml:space="preserve">
     <value>22</value>
+  </data>
+  <data name="factorial.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="factorial.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="factorial.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -1208,7 +1316,7 @@
     <value>NoControl</value>
   </data>
   <data name="factorial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 175</value>
+    <value>364, 175</value>
   </data>
   <data name="factorial.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
@@ -1230,6 +1338,12 @@
   </data>
   <data name="&gt;&gt;factorial.ZOrder" xml:space="preserve">
     <value>23</value>
+  </data>
+  <data name="clear.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="clear.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="clear.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -1267,6 +1381,12 @@
   <data name="&gt;&gt;clear.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="delete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="delete.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="delete.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1303,6 +1423,12 @@
   <data name="&gt;&gt;delete.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="help.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="help.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="help.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -1314,9 +1440,6 @@
   </data>
   <data name="help.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 175</value>
-  </data>
-  <data name="help.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="help.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 78</value>
@@ -1339,40 +1462,52 @@
   <data name="&gt;&gt;help.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="minimize_b.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="minimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="minimize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="minimize.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="minimize_b.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="minimize.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 10.8pt</value>
   </data>
-  <data name="minimize_b.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="minimize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="minimize_b.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="minimize.Location" type="System.Drawing.Point, System.Drawing">
     <value>421, 1</value>
   </data>
-  <data name="minimize_b.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="minimize.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 41</value>
   </data>
-  <data name="minimize_b.TabIndex" type="System.Int32, mscorlib">
+  <data name="minimize.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="minimize_b.Text" xml:space="preserve">
+  <data name="minimize.Text" xml:space="preserve">
     <value>__</value>
   </data>
-  <data name="&gt;&gt;minimize_b.Name" xml:space="preserve">
-    <value>minimize_b</value>
+  <data name="&gt;&gt;minimize.Name" xml:space="preserve">
+    <value>minimize</value>
   </data>
-  <data name="&gt;&gt;minimize_b.Type" xml:space="preserve">
+  <data name="&gt;&gt;minimize.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;minimize_b.Parent" xml:space="preserve">
+  <data name="&gt;&gt;minimize.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;minimize_b.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;minimize.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="maximize_b.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maximize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="maximize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="maximize.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB9AAAAdvCAYAAABxpGXZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABv
         eAAAb3gB1Ifa5wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAI8ZSURBVHhe7N17
@@ -1989,103 +2124,112 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAONUAtQikxjCchhoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="maximize_b.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="maximize.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="maximize_b.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="maximize.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="maximize_b.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="maximize.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 10.8pt</value>
   </data>
-  <data name="maximize_b.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="maximize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="maximize_b.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="maximize.Location" type="System.Drawing.Point, System.Drawing">
     <value>482, 1</value>
   </data>
-  <data name="maximize_b.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="maximize.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 41</value>
   </data>
-  <data name="maximize_b.TabIndex" type="System.Int32, mscorlib">
+  <data name="maximize.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
-  <data name="&gt;&gt;maximize_b.Name" xml:space="preserve">
-    <value>maximize_b</value>
+  <data name="&gt;&gt;maximize.Name" xml:space="preserve">
+    <value>maximize</value>
   </data>
-  <data name="&gt;&gt;maximize_b.Type" xml:space="preserve">
+  <data name="&gt;&gt;maximize.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;maximize_b.Parent" xml:space="preserve">
+  <data name="&gt;&gt;maximize.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;maximize_b.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;maximize.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="exit_b.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="exit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="exit_b.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="exit_b.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 10.8pt</value>
-  </data>
-  <data name="exit_b.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="exit_b.Location" type="System.Drawing.Point, System.Drawing">
-    <value>545, 1</value>
-  </data>
-  <data name="exit_b.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 46</value>
-  </data>
-  <data name="exit_b.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="exit_b.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;exit_b.Name" xml:space="preserve">
-    <value>exit_b</value>
-  </data>
-  <data name="&gt;&gt;exit_b.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exit_b.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;exit_b.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 36pt</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 53</value>
-  </data>
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+  <data name="exit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="textBox1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="exit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>588, 102</value>
+  <data name="exit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="exit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 10.8pt</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="exit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>545, 1</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="exit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 46</value>
+  </data>
+  <data name="exit.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="exit.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;exit.Name" xml:space="preserve">
+    <value>exit</value>
+  </data>
+  <data name="&gt;&gt;exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exit.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;exit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 36pt</value>
+  </data>
+  <data name="textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 53</value>
+  </data>
+  <data name="textBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 102</value>
+  </data>
+  <data name="textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="textBox.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBox.Name" xml:space="preserve">
+    <value>textBox</value>
+  </data>
+  <data name="&gt;&gt;textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -2107,7 +2251,7 @@
     <value>7, 6, 7, 6</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Kalkulačka</value>
+    <value>Calculator</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Calculator</value>
