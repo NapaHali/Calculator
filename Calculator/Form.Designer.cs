@@ -462,7 +462,7 @@
             this.HelpButton = true;
             this.KeyPreview = true;
             this.Name = "Calculator";
-            this.Load += new System.EventHandler(this.Clcltr_Load);
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Calculator_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Calculator_MouseMove);

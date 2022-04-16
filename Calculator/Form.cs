@@ -20,7 +20,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void Clcltr_Load(object sender, EventArgs e)
+        private void Calculator_Load(object sender, EventArgs e)
         {
 
         }
@@ -335,6 +335,10 @@ namespace Calculator
                 Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
         }
-        
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
