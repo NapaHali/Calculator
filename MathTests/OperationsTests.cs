@@ -31,10 +31,10 @@ namespace MathTests
         {
             Assert.AreEqual(2, MathLib.Add(1, 1));
             Assert.AreEqual(420.69, MathLib.Add(420, 0.69));
-            Assert.AreEqual(-1337.000001, MathLib.Add(-4200.987654, 2863.987653));
+            Assert.AreEqual(Math.Round(-1337.000001, 6), Math.Round(MathLib.Add(-4200.987654, 2863.987653), 6));
             Assert.AreEqual(0, MathLib.Add(69, -69));
             Assert.AreEqual(0, MathLib.Add(-69, 69));
-            
+
             Assert.ThrowsException<OverflowException>(() => MathLib.Add(long.MaxValue, long.MaxValue), "Overflow occured!");
         }
 
@@ -45,9 +45,9 @@ namespace MathTests
             Assert.AreEqual(-2, MathLib.Substract(2, 4));
             Assert.AreEqual(6, MathLib.Substract(2, -4));
 
-            Assert.AreEqual(420.69, MathLib.Substract(1024.1234, 603.4334));
-            Assert.AreNotEqual(420.69, MathLib.Substract(1024.1234, 603.4434));
-            Assert.AreEqual(1337.000001, MathLib.Substract(69420.1234567, 68083.1234566));
+            Assert.AreEqual(Math.Round(420.69, 2), Math.Round(MathLib.Substract(1024.1234, 603.4334), 2));
+            Assert.AreNotEqual(Math.Round(420.69, 2), Math.Round(MathLib.Substract(1024.1234, 603.4434), 2));
+            Assert.AreEqual(Math.Round(1337.000001, 6), Math.Round(MathLib.Substract(69420.1234567, 68083.1234566), 6));
 
             Assert.AreEqual(0, MathLib.Substract(420, 420));
             Assert.AreNotEqual(0, MathLib.Substract(420, -420));
@@ -68,12 +68,12 @@ namespace MathTests
                 Assert.AreEqual(0, MathLib.Multiply(i, 0));
             }
 
-            Assert.AreEqual(1073741824, MathLib.Multiply(short.MaxValue, short.MaxValue));
+            Assert.AreEqual(1073676289, MathLib.Multiply(short.MaxValue, short.MaxValue));
             Assert.AreEqual(1073741824, MathLib.Multiply(short.MinValue, short.MinValue));
-            Assert.AreEqual(-1073741824, MathLib.Multiply(short.MinValue, short.MaxValue));
+            Assert.AreEqual(-1073709056, MathLib.Multiply(short.MinValue, short.MaxValue));
 
-            Assert.AreEqual(29299.0698, MathLib.Multiply(69.69, 420.420));
-            Assert.AreEqual(-1789054.67733954, MathLib.Multiply(1337.123456789, -1337.987654321));
+            Assert.AreEqual(Math.Round(314.7711, 4), Math.Round(MathLib.Multiply(13.11, 24.01), 4));
+            Assert.AreEqual(Math.Round(-1789053.191401, 6), Math.Round(MathLib.Multiply(1337.123, -1337.987), 6));
             Assert.AreNotEqual(-1, MathLib.Multiply(-1, -1));
         }
 
@@ -90,11 +90,11 @@ namespace MathTests
                 i++;
             }
 
-            Assert.AreEqual(0.165014618840476, MathLib.Divide(69.42, 420.69));
-            Assert.AreEqual(6.06006914433881, MathLib.Divide(420.69, 69.42));
-            Assert.AreEqual(-6.06006914433881, MathLib.Divide(420.69, -69.42));
-            Assert.AreNotEqual(6.06006914433881, MathLib.Divide(-420.69, 69.42));
-            Assert.AreEqual(6.06006914433881, MathLib.Divide(-420.69, -69.42));
+            Assert.AreEqual(Math.Round(0.5, 1), Math.Round(MathLib.Divide(1, 2), 1));
+            Assert.AreEqual(Math.Round(0.33, 2), Math.Round(MathLib.Divide(1.25, 3.75), 2));
+            Assert.AreEqual(Math.Round(1.1586715867, 10), Math.Round(MathLib.Divide(3.14, 2.71), 10));
+            Assert.AreEqual(Math.Round(-95.5, 1), Math.Round(MathLib.Divide(1337, -14), 1));
+            Assert.AreEqual(Math.Round(-2.5, 1), Math.Round(MathLib.Divide(0.25, -0.1), 1));
         }
 
         [TestMethod]
@@ -149,8 +149,8 @@ namespace MathTests
         {
             Assert.AreEqual(2, MathLib.Root(4, 2));
             Assert.AreEqual(2, MathLib.Root(8, 3));
-            Assert.AreEqual(-1.25992104989487, MathLib.Root(-2, 3));
-            Assert.AreEqual(-1.5157165665104, MathLib.Root(-8, 5));
+            Assert.AreEqual(Math.Round(-1.25992104989487, 14), Math.Round(MathLib.Root(-2, 3), 14));
+            Assert.AreEqual(Math.Round(-1.5157165665104, 13), Math.Round(MathLib.Root(-8, 5), 13));
 
             for (int i = 0; i < 8; i++)
             {
