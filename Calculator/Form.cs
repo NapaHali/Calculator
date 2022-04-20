@@ -28,44 +28,45 @@ namespace Calculator
         //reading numbers from keyboard
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
+            Console.WriteLine("KeyValue: " + e.KeyValue.ToString() + " KeyCode: " + e.KeyCode.ToString() + " KeyData: " + e.KeyData.ToString());
             // Numpad buttons
-            if (e.KeyCode == Keys.NumPad0)
+            if (e.KeyCode == Keys.NumPad0 || e.KeyCode == Keys.D0)
             {
                 btn0.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad1)
+            if (e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D1)
             {
                 btn1.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad2)
+            if (e.KeyCode == Keys.NumPad2 || e.KeyCode == Keys.D2)
             {
                 btn2.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad3)
+            if (e.KeyCode == Keys.NumPad3 || e.KeyCode == Keys.D3)
             {
                 btn3.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad4)
+            if (e.KeyCode == Keys.NumPad4 || e.KeyCode == Keys.D4)
             {
                 btn4.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad5)
+            if (e.KeyCode == Keys.NumPad5 || e.KeyCode == Keys.D5)
             {
                 btn5.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad6)
+            if (e.KeyCode == Keys.NumPad6 || e.KeyCode == Keys.D6)
             {
                 btn6.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad7)
+            if (e.KeyCode == Keys.NumPad7 || e.KeyCode == Keys.D7)
             {
                 btn7.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad8)
+            if (e.KeyCode == Keys.NumPad8 || e.KeyCode == Keys.D8)
             {
                 btn8.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad9)
+            if (e.KeyCode == Keys.NumPad9 || e.KeyCode == Keys.D9)
             {
                 btn9.PerformClick();
             }
@@ -91,17 +92,24 @@ namespace Calculator
             {
                 btnFactorial.PerformClick();
             }
+            if (e.KeyCode == Keys.OemQuestion)
+            {
+                btnEquals.PerformClick();
+            }
+            if(e.KeyCode == Keys.OemPeriod)
+            {
+                btnPoint.PerformClick();
+            }
 
             // Unspecified buttons
             if (e.KeyCode == Keys.Return)
             {
                 btnEquals.PerformClick();
             }
-            if (e.KeyCode == Keys.Delete)
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
             {
                 btnDelete.PerformClick();
             }
-            // !,=,desatina,
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -114,7 +122,7 @@ namespace Calculator
         {
             if(textBox_Result.Text.Length > 1)
             {
-                textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.Text.Length - 1);
+                textBox_Result.Text = textBox_Result.Text.Substring(0, textBox_Result.Text.Length - 1);
             } 
             else
             {
@@ -126,6 +134,7 @@ namespace Calculator
         private void btnClear_Click(object sender, EventArgs e)
         {
             textBox_Result.Clear();
+            textBox_Result.Text = "0";
         }
 
         private void btnFactorial_Click(object sender, EventArgs e)
