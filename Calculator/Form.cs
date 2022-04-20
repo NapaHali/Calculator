@@ -165,7 +165,6 @@ namespace Calculator
             if (!textBox_Result.Text.Contains("."))
             {
                 textBox_Result.Text += ".";
-                textBox_Result.Refresh();
             }
         }
         private void btnEquals_Click(object sender, EventArgs e)
@@ -352,7 +351,7 @@ namespace Calculator
 
         }
 
-        private void textBox_Operations_TextChanged(object sender, EventArgs e)
+        private void textBox_History_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -56,7 +56,7 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.textBox_Result = new System.Windows.Forms.TextBox();
-            this.textBox_Operations = new System.Windows.Forms.TextBox();
+            this.textBox_History = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnPlus
@@ -357,7 +357,6 @@
             // 
             resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
@@ -423,21 +422,24 @@
             this.textBox_Result.ForeColor = System.Drawing.Color.White;
             this.textBox_Result.Name = "textBox_Result";
             this.textBox_Result.ReadOnly = true;
+            this.textBox_Result.TabStop = false;
             this.textBox_Result.TextChanged += new System.EventHandler(this.textBox_Result_TextChanged);
             // 
-            // textBox_Operations
+            // textBox_History
             // 
-            this.textBox_Operations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            resources.ApplyResources(this.textBox_Operations, "textBox_Operations");
-            this.textBox_Operations.Name = "textBox_Operations";
-            this.textBox_Operations.TextChanged += new System.EventHandler(this.textBox_Operations_TextChanged);
+            resources.ApplyResources(this.textBox_History, "textBox_History");
+            this.textBox_History.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.textBox_History.Name = "textBox_History";
+            this.textBox_History.ReadOnly = true;
+            this.textBox_History.TabStop = false;
+            this.textBox_History.TextChanged += new System.EventHandler(this.textBox_History_TextChanged);
             // 
             // Calculator
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Controls.Add(this.textBox_Operations);
+            this.Controls.Add(this.textBox_History);
             this.Controls.Add(this.textBox_Result);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnMaximize);
@@ -509,7 +511,7 @@
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox textBox_Result;
-        private System.Windows.Forms.TextBox textBox_Operations;
+        private System.Windows.Forms.TextBox textBox_History;
     }
 }
 
