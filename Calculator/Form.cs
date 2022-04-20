@@ -12,9 +12,9 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
-        private bool maximizeWindow = false;          //bool for maximizing and "demaximizing" calculator window
-        private bool dragging = false;                  //bool for dragging
-        private Point startPoint = new Point(0, 0);     //starting position of calculator window to make it draggable
+        private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
+        private bool dragging = false;                // bool for dragging
+        private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         public Calculator()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace Calculator
         //reading numbers from keyboard
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
+            // Numpad buttons
             if (e.KeyCode == Keys.NumPad0)
             {
                 btn0.PerformClick();
@@ -68,6 +69,8 @@ namespace Calculator
             {
                 btn9.PerformClick();
             }
+
+            // Operations
             if (e.KeyCode == Keys.Add)
             {
                 btnPlus.PerformClick();
@@ -84,7 +87,13 @@ namespace Calculator
             {
                 btnDivide.PerformClick();
             }
-            if (e.KeyCode == Keys.Enter)
+            if(ModifierKeys == Keys.Shift && e.KeyCode == Keys.OemQuotes)
+            {
+                btnFactorial.PerformClick();
+            }
+
+            // Unspecified buttons
+            if (e.KeyCode == Keys.Return)
             {
                 btnEquals.PerformClick();
             }
@@ -295,11 +304,11 @@ namespace Calculator
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -308,14 +317,12 @@ namespace Calculator
             switch (maximizeWindow)
             {
                 case false:
-                
-                    this.WindowState = FormWindowState.Maximized;
+                    WindowState = FormWindowState.Maximized;
                     maximizeWindow = true;
                     break;
 
                 case true:
-                
-                    this.WindowState = FormWindowState.Normal;
+                    WindowState = FormWindowState.Normal;
                     maximizeWindow = false;
                     break;
                 
@@ -342,7 +349,7 @@ namespace Calculator
             if (dragging)
             {
                 Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
+                Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
             }
         }
 
