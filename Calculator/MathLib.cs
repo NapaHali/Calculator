@@ -21,6 +21,8 @@ namespace Calculator
 
         public static double Divide(double x, double y)
         {
+            if (y == 0)
+                throw new System.DivideByZeroException();
             return x/y;
         }
 
@@ -55,7 +57,13 @@ namespace Calculator
 
         public static double Root(double x, int exponent)
         {
-            return 0;
+            int precision = 10;
+            double result = 1;
+            for (int i = 0; i < precision; i++)
+            {
+                result = result - (Power(result, exponent) - x) / (exponent * Power(result, exponent - 1));
+            }
+            return result;
         }
 
         public static double Abs(double x)
