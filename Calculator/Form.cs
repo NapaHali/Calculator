@@ -12,9 +12,9 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
-        private bool maximizeWindow = false;          //bool for maximizing and "demaximizing" calculator window
-        private bool dragging = false;                  //bool for dragging
-        private Point startPoint = new Point(0, 0);     //starting position of calculator window to make it draggable
+        private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
+        private bool dragging = false;                // bool for dragging
+        private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         public Calculator()
         {
             InitializeComponent();
@@ -28,290 +28,316 @@ namespace Calculator
         //reading numbers from keyboard
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.NumPad0)
+            Console.WriteLine("KeyValue: " + e.KeyValue.ToString() + " KeyCode: " + e.KeyCode.ToString() + " KeyData: " + e.KeyData.ToString());
+            // Numpad buttons
+            if (e.KeyCode == Keys.NumPad0 || e.KeyCode == Keys.D0)
             {
-                b0.PerformClick();
+                btn0.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad1)
+            if (e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D1)
             {
-                b1.PerformClick();
+                btn1.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad2)
+            if (e.KeyCode == Keys.NumPad2 || e.KeyCode == Keys.D2)
             {
-                b2.PerformClick();
+                btn2.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad3)
+            if (e.KeyCode == Keys.NumPad3 || e.KeyCode == Keys.D3)
             {
-                b3.PerformClick();
+                btn3.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad4)
+            if (e.KeyCode == Keys.NumPad4 || e.KeyCode == Keys.D4)
             {
-                b4.PerformClick();
+                btn4.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad5)
+            if (e.KeyCode == Keys.NumPad5 || e.KeyCode == Keys.D5)
             {
-                b5.PerformClick();
+                btn5.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad6)
+            if (e.KeyCode == Keys.NumPad6 || e.KeyCode == Keys.D6)
             {
-                b6.PerformClick();
+                btn6.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad7)
+            if (e.KeyCode == Keys.NumPad7 || e.KeyCode == Keys.D7)
             {
-                b7.PerformClick();
+                btn7.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad8)
+            if (e.KeyCode == Keys.NumPad8 || e.KeyCode == Keys.D8)
             {
-                b8.PerformClick();
+                btn8.PerformClick();
             }
-            if (e.KeyCode == Keys.NumPad9)
+            if (e.KeyCode == Keys.NumPad9 || e.KeyCode == Keys.D9)
             {
-                b9.PerformClick();
+                btn9.PerformClick();
             }
+
+            // Operations
             if (e.KeyCode == Keys.Add)
             {
-                //Console.WriteLine("key + was pressed");
-                plus.PerformClick();
+                btnPlus.PerformClick();
             }
             if (e.KeyCode == Keys.Subtract)
             {
-                //Console.WriteLine("key - was pressed");
-                minus.PerformClick();
+                btnMinus.PerformClick();
             }
             if (e.KeyCode == Keys.Multiply)
             {
-                //Console.WriteLine("key * was pressed");
-                multiply.PerformClick();
+                btnMultiply.PerformClick();
             }
             if (e.KeyCode == Keys.Divide)
             {
-                //Console.WriteLine("key / was pressed");
-                divide.PerformClick();
+                btnDivide.PerformClick();
             }
-            if (e.KeyCode == Keys.Enter)
+            if(ModifierKeys == Keys.Shift && e.KeyCode == Keys.OemQuotes)
             {
-                //Console.WriteLine("key ENTER was pressed");     //NOT WORKING: vs ukazuje že sa niečo deje ale conzola neukazuje nič
-                equals.PerformClick();
+                btnFactorial.PerformClick();
             }
-            if (e.KeyCode == Keys.Delete)
+            if (e.KeyCode == Keys.OemQuestion)
             {
-                //Console.WriteLine("key DELETE was pressed");
-                delete.PerformClick();
+                btnEquals.PerformClick();
             }
-            // !,=,desatina,
+            if(e.KeyCode == Keys.OemPeriod)
+            {
+                btnPoint.PerformClick();
+            }
+
+            // Unspecified buttons
+            if (e.KeyCode == Keys.Return)
+            {
+                btnEquals.PerformClick();
+            }
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+            {
+                btnDelete.PerformClick();
+            }
         }
 
-        private void help_Click(object sender, EventArgs e)
+        private void btnHelp_Click(object sender, EventArgs e)
         {
 
         }
 
         //erase last added number
-        private void delete_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
+            if(textBox_Result.Text.Length > 1)
+            {
+                textBox_Result.Text = textBox_Result.Text.Substring(0, textBox_Result.Text.Length - 1);
+            } 
+            else
+            {
+                textBox_Result.Text = "0";
+            }
         }
 
         //erase everything in textBox
-        private void clear_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            textBox.Clear();
+            textBox_Result.Clear();
+            textBox_Result.Text = "0";
         }
-        private void factorial_Click(object sender, EventArgs e)
+
+        private void btnFactorial_Click(object sender, EventArgs e)
         {
     
         }
-        private void root_Click(object sender, EventArgs e)
+
+        private void btnRoot_Click(object sender, EventArgs e)
         {
 
         }
-        private void power_Click(object sender, EventArgs e)
+
+        private void btnPower_Click(object sender, EventArgs e)
         {
 
         }
-        private void divide_Click(object sender, EventArgs e)
+
+        private void btnDivide_Click(object sender, EventArgs e)
         {
 
         }
-        private void multiply_Click(object sender, EventArgs e)
+
+        private void btnMultiply_Click(object sender, EventArgs e)
         {
 
         }
-        private void abs_Click(object sender, EventArgs e)
+
+        private void btnAbs_Click(object sender, EventArgs e)
         {
 
         }
-        private void minus_Click(object sender, EventArgs e)
+
+        private void btnMinus_Click(object sender, EventArgs e)
         {
 
         }
-        private void plus_Click(object sender, EventArgs e)
+
+        private void btnPlus_Click(object sender, EventArgs e)
         {
 
         }
-        private void dot_Click(object sender, EventArgs e)
+
+        private void btnPoint_Click(object sender, EventArgs e)
         {
             //printing dot to text field, will print it only once
-            if (!textBox.Text.Contains("."))
+            if (!textBox_Result.Text.Contains("."))
             {
-                textBox.Text += "."; 
+                textBox_Result.Text += ".";
             }
         }
-        private void equals_Click(object sender, EventArgs e)
+        private void btnEquals_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void b0_Click(object sender, EventArgs e)
+        private void btn0_Click(object sender, EventArgs e)
         {   
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "0";
+                textBox_Result.Text = "0";
             }
             else
             {
-                textBox.Text += "0";
+                textBox_Result.Text += "0";
             }
         }
-        private void b1_Click(object sender, EventArgs e)
+        private void btn1_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "1";
+                textBox_Result.Text = "1";
             }
             else
             {
-                textBox.Text += "1";
+                textBox_Result.Text += "1";
             }
         }
        
-        private void b2_Click(object sender, EventArgs e)
+        private void btn2_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "2";
+                textBox_Result.Text = "2";
             }
             else
             {
-                textBox.Text += "2";
+                textBox_Result.Text += "2";
             }
         }
-        private void b3_Click(object sender, EventArgs e)
+        private void btn3_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "3";
+                textBox_Result.Text = "3";
             }
             else
             {
-                textBox.Text += "3";
+                textBox_Result.Text += "3";
             }
         }
-        private void b4_Click(object sender, EventArgs e)
+        private void btn4_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "4";
+                textBox_Result.Text = "4";
             }
             else
             {
-                textBox.Text += "4";
+                textBox_Result.Text += "4";
             }
         }
-        private void b5_Click(object sender, EventArgs e)
+        private void btn5_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "5";
+                textBox_Result.Text = "5";
             }
             else
             {
-                textBox.Text += "5";
+                textBox_Result.Text += "5";
             }
         }
-        private void b6_Click(object sender, EventArgs e)
+        private void btn6_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "6";
+                textBox_Result.Text = "6";
             }
             else
             {
-                textBox.Text += "6";
+                textBox_Result.Text += "6";
             }
         }
-        private void b7_Click(object sender, EventArgs e)
+        private void btn7_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "7";
+                textBox_Result.Text = "7";
             }
             else
             {
-                textBox.Text += "7";
+                textBox_Result.Text += "7";
             }
         }
-        private void b8_Click(object sender, EventArgs e)
+        private void btn8_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "8";
+                textBox_Result.Text = "8";
             }
             else
             {
-                textBox.Text += "8";
+                textBox_Result.Text += "8";
             }
         }
-        private void b9_Click(object sender, EventArgs e)
+        private void btn9_Click(object sender, EventArgs e)
         {
             //printing number to text field
-            if (textBox.Text == "0")
+            if (textBox_Result.Text == "0")
             {
-                textBox.Text = "9";
+                textBox_Result.Text = "9";
             }
             else
             {
-                textBox.Text += "9";
+                textBox_Result.Text += "9";
             }
         }
-        private void exit_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
-        private void minimize_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
-        private void maximize_Click(object sender, EventArgs e)
+
+        private void btnMaximize_Click(object sender, EventArgs e)
         {
             //maximizing and getting it back to it's original size
             switch (maximizeWindow)
             {
                 case false:
-                
-                    this.WindowState = FormWindowState.Maximized;
+                    WindowState = FormWindowState.Maximized;
                     maximizeWindow = true;
                     break;
 
                 case true:
-                
-                    this.WindowState = FormWindowState.Normal;
+                    WindowState = FormWindowState.Normal;
                     maximizeWindow = false;
                     break;
                 
             }
         }
 
-        
         //when the left mouse button is pressed down on specific places, the object is draggable
         //startPoint- position the calculator window on the monitor 
         private void Calculator_MouseDown(object sender, MouseEventArgs e)
@@ -332,13 +358,18 @@ namespace Calculator
             if (dragging)
             {
                 Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
+                Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
             }
         }
-        private void textBox_TextChanged(object sender, EventArgs e)
+
+        private void textBox_Result_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        private void textBox_History_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
