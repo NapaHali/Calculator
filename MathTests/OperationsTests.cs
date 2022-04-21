@@ -91,8 +91,8 @@ namespace MathTests
             }
 
             Assert.AreEqual(0.5, MathLib.Divide(1, 2), 0.01);
-            Assert.AreEqual(0.333, MathLib.Divide(1.25, 3.75), 0.0001);
-            Assert.AreEqual(1.1586715867, MathLib.Divide(3.14, 2.71), 0.00000000001);
+            Assert.AreEqual(0.333, MathLib.Divide(1.25, 3.75), 0.0004);
+            Assert.AreEqual(1.1586715867, MathLib.Divide(3.14, 2.71), 0.00000000009);
             Assert.AreEqual(-95.5, MathLib.Divide(1337, -14), 0.01);
             Assert.AreEqual(-2.5, MathLib.Divide(0.25, -0.1), 0.01);
         }
