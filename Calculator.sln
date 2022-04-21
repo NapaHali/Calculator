@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTests", "MathTests\MathTests.csproj", "{3E0E7E3F-456D-4442-B179-380A904FFC04}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{69D76861-3652-49C4-9908-7E44E57FF918}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calculator_Setup", "Setup\Setup.vdproj", "{69D76861-3652-49C4-9908-7E44E57FF918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stddev", "stddev\stddev.csproj", "{BFA0DF89-165A-4CB3-B013-55206820CA4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{3E0E7E3F-456D-4442-B179-380A904FFC04}.Release|Any CPU.Build.0 = Release|Any CPU
 		{69D76861-3652-49C4-9908-7E44E57FF918}.Debug|Any CPU.ActiveCfg = Debug
 		{69D76861-3652-49C4-9908-7E44E57FF918}.Release|Any CPU.ActiveCfg = Release
+		{BFA0DF89-165A-4CB3-B013-55206820CA4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA0DF89-165A-4CB3-B013-55206820CA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA0DF89-165A-4CB3-B013-55206820CA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA0DF89-165A-4CB3-B013-55206820CA4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
