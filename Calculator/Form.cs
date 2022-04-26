@@ -19,7 +19,9 @@ namespace Calculator
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         private char[] priorityOrder = new char[] { '÷', '*', '+', '-' };
-
+        float textFondChange = 36;                    // variable for changing font size in textBox_Result
+        int maxFondSize = 36;                         // original size of textBox_Result text size
+        int minFontSize = 10;                         // minimal size for text size in textBox_Result
         private bool isNumeric(char ch)
         {
             return int.TryParse(ch.ToString(), out _);
@@ -486,24 +488,22 @@ namespace Calculator
                 Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
             }
         }
-        float x = 36;
+        
         private void textBox_Result_TextChanged(object sender, EventArgs e)
         {
-            textBox_Result.Font = new Font(textBox_Result.Font.Name, x);
+            //changing font size automaticly, based on text width
+            textBox_Result.Font = new Font(textBox_Result.Font.Name, textFondChange);
 
             Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
-            if (s.Width >= (textBox_Result.Width) - 20 && x > 10)
+            if (s.Width >= ((textBox_Result.Width) -textFondChange) && textFondChange > minFontSize) 
             {
-                x -= 1;
+                textFondChange -= 1;        //fluently decrasing font size
             }
 
-            if (s.Width < (textBox_Result.Width - 20)  && x< 36)
+            if (s.Width < ((textBox_Result.Width) - textFondChange)  && textFondChange< maxFondSize)
             {
-                x += 1;
+                textFondChange += 1;        //fluently increasing font size
             }
-            Console.WriteLine($"textbox.Width {textBox_Result.Width}");
-            Console.WriteLine($"text.size {s.Width}");
-            Console.WriteLine($"size {x}");
         }
 
         private void textBox_History_TextChanged(object sender, EventArgs e)
