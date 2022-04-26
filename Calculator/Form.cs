@@ -22,7 +22,7 @@ namespace Calculator
 
         private void Calculator_Load(object sender, EventArgs e)
         {
-
+            this.textBox_Result.AutoSize = false;
         }
 
         //reading numbers from keyboard
@@ -323,19 +323,19 @@ namespace Calculator
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             //maximizing and getting it back to it's original size
-            switch (maximizeWindow)
-            {
-                case false:
-                    WindowState = FormWindowState.Maximized;
-                    maximizeWindow = true;
-                    break;
-
-                case true:
-                    WindowState = FormWindowState.Normal;
-                    maximizeWindow = false;
-                    break;
-                
-            }
+        //    switch (maximizeWindow)
+        //    {
+        //        case false:
+        //            WindowState = FormWindowState.Maximized;
+        //            maximizeWindow = true;
+        //           break;
+        //
+        //        case true:
+        //            WindowState = FormWindowState.Normal;
+        //            maximizeWindow = false;
+        //            break;
+        //        
+        //    }
         }
 
         //when the left mouse button is pressed down on specific places, the object is draggable
@@ -361,10 +361,24 @@ namespace Calculator
                 Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
             }
         }
-
+        float x = 36;
         private void textBox_Result_TextChanged(object sender, EventArgs e)
         {
+            textBox_Result.Font = new Font(textBox_Result.Font.Name, x);
 
+            Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
+            if (s.Width >= (textBox_Result.Width) - 20 && x > 10)
+            {
+                x -= 1;
+            }
+
+            if (s.Width < (textBox_Result.Width - 20)  && x< 36)
+            {
+                x += 1;
+            }
+            Console.WriteLine($"textbox.Width {textBox_Result.Width}");
+            Console.WriteLine($"text.size {s.Width}");
+            Console.WriteLine($"size {x}");
         }
 
         private void textBox_History_TextChanged(object sender, EventArgs e)
