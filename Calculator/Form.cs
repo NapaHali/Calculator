@@ -12,6 +12,9 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
+        private string formula = "";
+        private bool pointAllowed = true;
+        private bool pointAllowedPrevious = true;
         private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
@@ -131,7 +134,7 @@ namespace Calculator
             }
 
             // Unspecified buttons
-            if (e.KeyCode == Keys.Return)
+            if (e.KeyCode == Keys.Enter)
             {
                 btnEquals.PerformClick();
             }
@@ -151,6 +154,13 @@ namespace Calculator
         {
             if (textBox_Result.Text.Length > 1)
             {
+                if (textBox_Result.Text[textBox_Result.TextLength-1] == '.')
+                {
+                    pointAllowed = true;
+                } else if (!isLastNumeric(textBox_Result.Text))
+                {
+                    pointAllowed = pointAllowedPrevious;
+                }
                 textBox_Result.Text = textBox_Result.Text.Substring(0, textBox_Result.Text.Length - 1);
             }
             else
@@ -188,6 +198,8 @@ namespace Calculator
                 textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
             }
             textBox_Result.Text += "÷";
+            pointAllowedPrevious = pointAllowed;
+            pointAllowed = true;
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
@@ -197,6 +209,8 @@ namespace Calculator
                 textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
             }
             textBox_Result.Text += "*";
+            pointAllowedPrevious = pointAllowed;
+            pointAllowed = true;
         }
 
         private void btnAbs_Click(object sender, EventArgs e)
@@ -211,6 +225,8 @@ namespace Calculator
                 textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
             }
             textBox_Result.Text += "-";
+            pointAllowedPrevious = pointAllowed;
+            pointAllowed = true;
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
@@ -220,14 +236,17 @@ namespace Calculator
                 textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
             }
             textBox_Result.Text += "+";
+            pointAllowedPrevious = pointAllowed;
+            pointAllowed = true;
         }
 
         private void btnPoint_Click(object sender, EventArgs e)
         {
             //printing dot to text field, will print it only once
-            if (!textBox_Result.Text.Contains("."))
+            if (isLastNumeric(textBox_Result.Text) && pointAllowed)
             {
                 textBox_Result.Text += ".";
+                pointAllowed = false;
             }
         }
         private void btnEquals_Click(object sender, EventArgs e)
