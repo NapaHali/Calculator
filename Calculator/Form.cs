@@ -15,13 +15,14 @@ namespace Calculator
         private string formula = "";
         private bool pointAllowed = true;
         private bool pointAllowedPrevious = true;
-        private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
+        //private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         private char[] priorityOrder = new char[] { '÷', '*', '+', '-' };
         float textFondChange = 36;                    // variable for changing font size in textBox_Result
         int maxFondSize = 36;                         // original size of textBox_Result text size
         int minFontSize = 10;                         // minimal size for text size in textBox_Result
+        int maximalInput = 32;                        // digits of biggest number that can be inputted
         private bool isNumeric(char ch)
         {
             return int.TryParse(ch.ToString(), out _);
@@ -153,7 +154,7 @@ namespace Calculator
 
         //erase last added number
         private void btnDelete_Click(object sender, EventArgs e)
-        {
+        {          
             if (textBox_Result.Text.Length > 1)
             {
                 if (textBox_Result.Text[textBox_Result.TextLength-1] == '.')
@@ -195,24 +196,32 @@ namespace Calculator
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            if (!isLastNumeric(textBox_Result.Text))
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                if (!isLastNumeric(textBox_Result.Text))
+                {
+                    textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                }
+                textBox_Result.Text += '÷';
+                pointAllowedPrevious = pointAllowed;
+                pointAllowed = true;
             }
-            textBox_Result.Text += "÷";
-            pointAllowedPrevious = pointAllowed;
-            pointAllowed = true;
+            
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            if (!isLastNumeric(textBox_Result.Text))
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                if (!isLastNumeric(textBox_Result.Text))
+                {
+                    textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                }
+                textBox_Result.Text += "*";
+                pointAllowedPrevious = pointAllowed;
+                pointAllowed = true;
             }
-            textBox_Result.Text += "*";
-            pointAllowedPrevious = pointAllowed;
-            pointAllowed = true;
+            
         }
 
         private void btnAbs_Click(object sender, EventArgs e)
@@ -222,34 +231,47 @@ namespace Calculator
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if (!isLastNumeric(textBox_Result.Text))
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                if (!isLastNumeric(textBox_Result.Text))
+                {
+                    textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                }
+                textBox_Result.Text += "-";
+                pointAllowedPrevious = pointAllowed;
+                pointAllowed = true;
             }
-            textBox_Result.Text += "-";
-            pointAllowedPrevious = pointAllowed;
-            pointAllowed = true;
+            
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if (!isLastNumeric(textBox_Result.Text))
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                if (!isLastNumeric(textBox_Result.Text))
+                {
+                    textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
+                }
+                textBox_Result.Text += "+";
+                pointAllowedPrevious = pointAllowed;
+                pointAllowed = true;
             }
-            textBox_Result.Text += "+";
-            pointAllowedPrevious = pointAllowed;
-            pointAllowed = true;
+            
         }
 
         private void btnPoint_Click(object sender, EventArgs e)
         {
-            //printing dot to text field, will print it only once
-            if (isLastNumeric(textBox_Result.Text) && pointAllowed)
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text += ".";
-                pointAllowed = false;
+                //printing dot to text field, will print it only once
+                if (isLastNumeric(textBox_Result.Text) && pointAllowed)
+                {
+                    textBox_Result.Text += ".";
+                    pointAllowed = false;
+                }
             }
+            
+
         }
         private void btnEquals_Click(object sender, EventArgs e)
         {
@@ -307,8 +329,9 @@ namespace Calculator
                     expressionIndexRight = i;
                 }
 
-                double x = double.Parse(left);
-                double y = double.Parse(right);
+                // TODO: Globalized decimal point instead of this
+                double x = double.Parse(left, System.Globalization.CultureInfo.InvariantCulture);
+                double y = double.Parse(right, System.Globalization.CultureInfo.InvariantCulture);
 
                 double result = PerformOperation(text[priorityOperationIndex], x, y);
                 text = text.Replace(text.Substring(expressionIndexLeft, expressionIndexRight - expressionIndexLeft + 1), result.ToString());
@@ -319,124 +342,167 @@ namespace Calculator
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if (textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "0";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "0";
+                }
+                else
+                {
+                    if (isLastNumeric(textBox_Result.Text) || textBox_Result.Text[textBox_Result.Text.Length-1] == '.')
+                        textBox_Result.Text += "0";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "0";
-            }
+            
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if (textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "1";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "1";
+                }
+                else
+                {
+                    textBox_Result.Text += "1";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "1";
-            }
+                
+            
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "2";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "2";
+                }
+                else
+                {
+                    textBox_Result.Text += "2";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "2";
-            }
+            
         }
         private void btn3_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "3";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "3";
+                }
+                else
+                {
+                    textBox_Result.Text += "3";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "3";
-            }
+            
         }
         private void btn4_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if (textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "4";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "4";
+                }
+                else
+                {
+                    textBox_Result.Text += "4";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "4";
-            }
+            
         }
         private void btn5_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if (textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "5";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "5";
+                }
+                else
+                {
+                    textBox_Result.Text += "5";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "5";
-            }
+            
         }
         private void btn6_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "6";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "6";
+                }
+                else
+                {
+                    textBox_Result.Text += "6";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "6";
-            }
+            
         }
         private void btn7_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if (textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "7";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "7";
+                }
+                else
+                {
+                    textBox_Result.Text += "7";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "7";
-            }
+            
         }
         private void btn8_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "8";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "8";
+                }
+                else
+                {
+                    textBox_Result.Text += "8";
+                }
             }
-            else
-            {
-                textBox_Result.Text += "8";
-            }
+            
         }
         private void btn9_Click(object sender, EventArgs e)
         {
-            //printing number to text field
-            if (textBox_Result.Text == "0")
+            if(textBox_Result.Text.Length < maximalInput)
             {
-                textBox_Result.Text = "9";
+                //printing number to text field
+                if (textBox_Result.Text == "0")
+                {
+                    textBox_Result.Text = "9";
+                }
+                else
+                {
+                    textBox_Result.Text += "9";
+                }
+
             }
-            else
-            {
-                textBox_Result.Text += "9";
-            }
+            
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
