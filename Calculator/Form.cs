@@ -488,6 +488,7 @@ namespace Calculator
                 Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
             }
         }
+
         
         private void textBox_Result_TextChanged(object sender, EventArgs e)
         {
@@ -504,6 +505,7 @@ namespace Calculator
             {
                 textFondChange += 1;        //fluently increasing font size
             }
+
         }
 
         private void textBox_History_TextChanged(object sender, EventArgs e)
