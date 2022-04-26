@@ -18,6 +18,35 @@ namespace Calculator
         private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
+        private char[] priorityOrder = new char[] { '÷', '*', '+', '-' };
+
+        private bool isNumeric(char ch)
+        {
+            return int.TryParse(ch.ToString(), out _);
+        }
+
+        private bool isLastNumeric(string text)
+        {
+            if (text.Length == 0) return false;
+            return int.TryParse(text[text.Length - 1].ToString(), out _);
+        }
+
+        private double PerformOperation(char opchar, double x, double y = 0)
+        {
+            switch (opchar)
+            {
+                case '÷':
+                    return MathLib.Divide(x, y);
+                case '*':
+                    return MathLib.Multiply(x, y);
+                case '+':
+                    return MathLib.Add(x, y);
+                case '-':
+                    return MathLib.Substract(x, y);
+            }
+            throw new Exception("Invalid operator character specified.");
+        }
+
         public Calculator()
         {
             InitializeComponent();
@@ -91,7 +120,7 @@ namespace Calculator
             {
                 btnDivide.PerformClick();
             }
-            if(ModifierKeys == Keys.Shift && e.KeyCode == Keys.OemQuotes)
+            if (ModifierKeys == Keys.Shift && e.KeyCode == Keys.OemQuotes)
             {
                 btnFactorial.PerformClick();
             }
@@ -99,7 +128,7 @@ namespace Calculator
             {
                 btnEquals.PerformClick();
             }
-            if(e.KeyCode == Keys.OemPeriod)
+            if (e.KeyCode == Keys.OemPeriod)
             {
                 btnPoint.PerformClick();
             }
@@ -123,7 +152,7 @@ namespace Calculator
         //erase last added number
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length > 1)
+            if (textBox_Result.Text.Length > 1)
             {
                 if (textBox_Result.Text[textBox_Result.TextLength-1] == '.')
                 {
@@ -133,7 +162,7 @@ namespace Calculator
                     pointAllowed = pointAllowedPrevious;
                 }
                 textBox_Result.Text = textBox_Result.Text.Substring(0, textBox_Result.Text.Length - 1);
-            } 
+            }
             else
             {
                 textBox_Result.Text = "0";
@@ -149,7 +178,7 @@ namespace Calculator
 
         private void btnFactorial_Click(object sender, EventArgs e)
         {
-    
+
         }
 
         private void btnRoot_Click(object sender, EventArgs e)
@@ -222,11 +251,72 @@ namespace Calculator
         }
         private void btnEquals_Click(object sender, EventArgs e)
         {
+            string text = textBox_Result.Text;
+            if (!isLastNumeric(text))
+                return;
 
+            int operatorCount = 0;
+
+            foreach (char ch in text)
+            {
+                if (!isNumeric(ch) && ch != '.')
+                {
+                    operatorCount++;
+                }
+            }
+
+            for (int u = 0; u < operatorCount; u++)
+            {
+                int priorityOperationIndex = -1;
+
+                for (int i = 0; i < text.Length; i++)
+                {
+                    if (!isNumeric(text[i]) && text[i] != '.')
+                    {
+                        if (priorityOperationIndex == -1)
+                        {
+                            priorityOperationIndex = i;
+                        }
+                        else
+                        {
+                            if (Array.IndexOf(priorityOrder, text[i]) < Array.IndexOf(priorityOrder, text[priorityOperationIndex]))
+                            {
+                                priorityOperationIndex = i;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+                string left = "", right = "";
+                int expressionIndexLeft = priorityOperationIndex, expressionIndexRight = priorityOperationIndex;
+
+                for (int i = priorityOperationIndex - 1; i >= 0 && (isNumeric(text[i]) || text[i] == '.'); i--)
+                {
+                    left = left.Insert(0, text[i].ToString());
+                    expressionIndexLeft = i;
+                }
+                for (int i = priorityOperationIndex + 1; i < text.Length && (isNumeric(text[i]) || text[i] == '.'); i++)
+                {
+                    right += text[i].ToString();
+                    expressionIndexRight = i;
+                }
+
+                double x = double.Parse(left);
+                double y = double.Parse(right);
+
+                double result = PerformOperation(text[priorityOperationIndex], x, y);
+                text = text.Replace(text.Substring(expressionIndexLeft, expressionIndexRight - expressionIndexLeft + 1), result.ToString());
+            }
+            textBox_History.Text = textBox_Result.Text;
+            textBox_Result.Text = text;
         }
 
         private void btn0_Click(object sender, EventArgs e)
-        {   
+        {
             //printing number to text field
             if (textBox_Result.Text == "0")
             {
@@ -249,7 +339,7 @@ namespace Calculator
                 textBox_Result.Text += "1";
             }
         }
-       
+
         private void btn2_Click(object sender, EventArgs e)
         {
             //printing number to text field
@@ -369,7 +459,7 @@ namespace Calculator
                     WindowState = FormWindowState.Normal;
                     maximizeWindow = false;
                     break;
-                
+
             }
         }
 
