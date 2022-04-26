@@ -429,6 +429,7 @@
             // 
             resources.ApplyResources(this.textBox_History, "textBox_History");
             this.textBox_History.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.textBox_History.ForeColor = System.Drawing.Color.Gainsboro;
             this.textBox_History.Name = "textBox_History";
             this.textBox_History.ReadOnly = true;
             this.textBox_History.TabStop = false;
