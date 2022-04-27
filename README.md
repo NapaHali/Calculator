@@ -6,7 +6,8 @@ Windows 64bit
 Autori
 ------
 
-Nazev tymu
+DivideByZeroException
+
 - xkopac07 Timotej Kopáč 
 - xvarga21 Adrián Varga 
 - xbuday05 Martina Budayová 
