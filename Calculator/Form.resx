@@ -2292,6 +2292,9 @@
   <data name="textBox_Result.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
+  <data name="textBox_Result.MaxLength" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
   <data name="textBox_Result.Size" type="System.Drawing.Size, System.Drawing">
     <value>587, 75</value>
   </data>
