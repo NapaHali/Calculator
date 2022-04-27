@@ -149,6 +149,9 @@ namespace Calculator
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
+            Form formHelp= new HelpForm();
+            formHelp.Show();
+
 
         }
 
