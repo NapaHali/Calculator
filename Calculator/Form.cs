@@ -19,10 +19,10 @@ namespace Calculator
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         private char[] priorityOrder = new char[] { '÷', '*', '+', '-' };
-        float textFondChange = 36;                    // variable for changing font size in textBox_Result
-        int maxFondSize = 36;                         // original size of textBox_Result text size
-        int minFontSize = 10;                         // minimal size for text size in textBox_Result
-        int maximalInput = 32;                        // digits of biggest number that can be inputted
+        float textFontChange = 36;                    // variable for changing font size in textBox_Result
+        const int maxFontSize = 36;                         // original size of textBox_Result text size
+        const int minFontSize = 10;                         // minimal size for text size in textBox_Result
+        const int maximalInput = 32;                        // digits of biggest number that can be inputted
         private bool isNumeric(char ch)
         {
             return int.TryParse(ch.ToString(), out _);
@@ -149,7 +149,7 @@ namespace Calculator
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            Form formHelp= new HelpForm();
+            Form formHelp = new HelpForm();
             formHelp.Show();
 
 
@@ -157,7 +157,7 @@ namespace Calculator
 
         //erase last added number
         private void btnDelete_Click(object sender, EventArgs e)
-        {          
+        {
             if (textBox_Result.Text.Length > 1)
             {
                 if (textBox_Result.Text[textBox_Result.TextLength-1] == '.')
@@ -562,17 +562,17 @@ namespace Calculator
         private void textBox_Result_TextChanged(object sender, EventArgs e)
         {
             //changing font size automaticly, based on text width
-            textBox_Result.Font = new Font(textBox_Result.Font.Name, textFondChange);
+            textBox_Result.Font = new Font(textBox_Result.Font.Name, textFontChange);
 
             Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
-            if (s.Width >= ((textBox_Result.Width) -textFondChange) && textFondChange > minFontSize) 
+            if (s.Width >= ((textBox_Result.Width) -textFontChange) && textFontChange > minFontSize) 
             {
-                textFondChange -= 1;        //fluently decrasing font size
+                textFontChange -= 1;        //fluently decrasing font size
             }
 
-            if (s.Width < ((textBox_Result.Width) - textFondChange)  && textFondChange< maxFondSize)
+            if (s.Width < ((textBox_Result.Width) - textFontChange)  && textFontChange< maxFontSize)
             {
-                textFondChange += 1;        //fluently increasing font size
+                textFontChange += 1;        //fluently increasing font size
             }
 
         }
