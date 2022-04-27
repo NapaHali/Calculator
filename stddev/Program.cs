@@ -19,25 +19,30 @@ namespace Profiler
             while ((input = Console.ReadLine()) != null && input != "")
             {
                 double num = 0;
-                if (!Double.TryParse(input, out num))
+                string[] splitted = input.Split(new char[] { ' ', '\r', '\n', '\t' });
+                foreach(string s in splitted)
                 {
-                    Console.WriteLine("Neplatny vstup.");
-                    return;
+                    Console.WriteLine(s);
+                    if(!double.TryParse(s, out num))
+                    {
+                        Console.WriteLine("Neplatny vstup.");
+                        return;
+                    }
+
+                    array.Add(num);
+                    sum += num;
                 }
-                array.Add(num);
-                sum += num;
             }
 
             int all = array.Count;
 
-            double average = sum / (all);
+            double average = sum / all;
             sum = 0;
 
             foreach (double d in array)
             {
                 sum += MathLib.Power(d, 2);
             }
-
 
             Console.WriteLine(MathLib.Root((sum - (all * MathLib.Power(average, 2))) / (all - 1), 2));
         }
