@@ -26,7 +26,7 @@ namespace Calculator
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Calculator.help = true; ;       //bool from Calculator form
+            Calculator.helpPageNotOpen = true;       //bool from Calculator form
             Close();
         }
         private void Help_MouseDown(object sender, MouseEventArgs e)
