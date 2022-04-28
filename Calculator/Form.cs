@@ -572,12 +572,12 @@ namespace Calculator
 
             Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
 
-            if (s.Width >= ((textBox_Result.Width) -maxFontSize) && textFontChange > minFontSize) 
+            if (s.Width >= ((textBox_Result.Width) - maxFontSize) && textFontChange > minFontSize) 
             {
-                textFontChange -= 2;        //fluently decrasing font size
+                textFontChange -= 2;        //fluently decreasing font size
             }
 
-            if (s.Width < ((textBox_Result.Width) - maxFontSize)  && textFontChange< maxFontSize)
+            if (s.Width < ((textBox_Result.Width) - maxFontSize)  && textFontChange < maxFontSize)
             {
                 textFontChange += 2;        //fluently increasing font size
             }
