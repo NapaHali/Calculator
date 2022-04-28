@@ -7,18 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
+enum ErrorCode
+{
+    Success,
+    SyntaxError,
+    InvalidOperation,
+    DivideByZeroError,
+    InvalidOutputFormula
+}
 namespace Calculator
 {
     public partial class Calculator : Form
     {
-        private string formula = "";
+        private bool errorDisplay = false;
         private bool pointAllowed = true;
         private bool pointAllowedPrevious = true;
         //private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
-        private char[] priorityOrder = new char[] { '÷', '*', '+', '-' };
+        private char[] priorityOrder = new char[] { '÷', '*', '-', '+' };
         float textFontChange = 36;                    // variable for changing font size in textBox_Result
         const int maxFontSize = 36;                         // original size of textBox_Result text size
         const int minFontSize = 10;                         // minimal size for text size in textBox_Result
@@ -34,20 +43,198 @@ namespace Calculator
             return int.TryParse(text[text.Length - 1].ToString(), out _);
         }
 
-        private double PerformOperation(char opchar, double x, double y = 0)
+        private bool lastEquals(string text, char ch)
         {
+            return text[text.Length -1] == ch;
+        }
+
+        private string ReplaceFirst(string text, string search, string replace)
+        {
+            int pos = text.IndexOf(search);
+            if (pos < 0)
+            {
+                return text;
+            }
+            return text.Substring(0, pos) + replace + text.Substring(pos + search.Length);
+        }
+
+        private ErrorCode PerformOperation(char opchar, out double result, double x, double y = 0)
+        {
+            result = 0;
             switch (opchar)
             {
                 case '÷':
-                    return MathLib.Divide(x, y);
+                    try
+                    {
+                        result = MathLib.Divide(x, y);
+                    }
+                    catch (DivideByZeroException)
+                    {
+                        return ErrorCode.DivideByZeroError;
+                    }
+                    return ErrorCode.Success;
                 case '*':
-                    return MathLib.Multiply(x, y);
+                    result = MathLib.Multiply(x, y);
+                    return ErrorCode.Success;
                 case '+':
-                    return MathLib.Add(x, y);
+                    result = MathLib.Add(x, y);
+                    return ErrorCode.Success;
                 case '-':
-                    return MathLib.Substract(x, y);
+                    result = MathLib.Substract(x, y);
+                    return ErrorCode.Success;
             }
-            throw new Exception("Invalid operator character specified.");
+            return ErrorCode.InvalidOperation;
+        }
+
+        private string ErrorMessage(ErrorCode code)
+        {
+            switch (code)
+            {
+                case ErrorCode.SyntaxError:
+                    return "Syntax error.";
+                case ErrorCode.DivideByZeroError:
+                    return "Can't divide by zero.";
+                default:
+                    return "Internal error.";
+            }
+        }
+
+        private ErrorCode ParseFormula(string formula, out double result)
+        {
+            result = 0;
+            int negativeSwitch = 1;
+
+            //Console.WriteLine($"Before: {formula}");
+            if (!isLastNumeric(formula))
+                return ErrorCode.SyntaxError;
+
+            while (formula.Contains('+') || formula.Contains('-') || formula.Contains('*') || formula.Contains('÷'))
+            {
+                if (formula[0] == '-')
+                {
+                    negativeSwitch *= -1;
+                    for (int i = 0; i < formula.Length; i++)
+                    {
+                        if (formula[i] == '+')
+                        {
+                            if (i - 1 >= 0 && formula[i - 1] == 'E')
+                            {
+                                continue;
+                            }
+                            formula = formula.Remove(i, 1);
+                            formula = formula.Insert(i, "-");
+                        }
+                        else if (formula[i] == '-')
+                        {
+                            if (i - 1 >= 0 && formula[i - 1] == 'E')
+                            {
+                                continue;
+                            }
+                            formula = formula.Remove(i, 1);
+                            formula = formula.Insert(i, "+");
+                        }
+                    }
+                }
+
+                if (formula[0] == '+')
+                {
+                    formula = formula.Remove(0, 1);
+                }
+
+                if (!(formula.Contains('+') || formula.Contains('-') || formula.Contains('*') || formula.Contains('÷')))
+                {
+                    break;
+                }
+
+                int priorityOperationIndex = -1;
+
+                for (int i = 0; i < formula.Length; i++)
+                {
+                    if (!isNumeric(formula[i]) && formula[i] != '.' && formula[i] != 'E')
+                    {
+                        if (i-1 >= 0 && formula[i-1] == 'E')
+                        {
+                            continue;
+                        }
+                        if (priorityOperationIndex == -1)
+                        {
+                            priorityOperationIndex = i;
+                        }
+                        else
+                        {
+                            if (Array.IndexOf(priorityOrder, formula[i]) < Array.IndexOf(priorityOrder, formula[priorityOperationIndex]))
+                            {
+                                priorityOperationIndex = i;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+                if (priorityOperationIndex == -1)
+                {
+                    break;
+                }
+
+                string left = "", right = "";
+                int expressionIndexLeft = priorityOperationIndex, expressionIndexRight = priorityOperationIndex;
+
+                for (int i = priorityOperationIndex - 1; i >= 0 && (isNumeric(formula[i]) || formula[i] == '.' || formula[i] == 'E'); i--)
+                {
+                    left = left.Insert(0, formula[i].ToString());
+                    expressionIndexLeft = i;
+                }
+                for (int i = priorityOperationIndex + 1; i < formula.Length && ((isNumeric(formula[i]) || formula[i] == '.' || formula[i] == 'E') || (i == priorityOperationIndex + 1 && !isNumeric(formula[i]) && formula[i] != '*' && formula[i] != '÷')); i++)
+                {
+                    right += formula[i].ToString();
+                    expressionIndexRight = i;
+                }
+
+                Console.WriteLine($"Operation: {formula[priorityOperationIndex]}");
+                Console.WriteLine($"Text: {formula}");
+                Console.WriteLine($"Left: {left}");
+                Console.WriteLine($"Right: {right}");
+
+                // TODO: Globalized decimal point
+                double x; double y;
+                if (!double.TryParse(left, out x)) return ErrorCode.SyntaxError;
+                if (!double.TryParse(right, out y)) return ErrorCode.SyntaxError;
+
+                x = Math.Round(x, 8);
+                y = Math.Round(y, 8);
+
+                double operationResult = 0;
+                ErrorCode opError = PerformOperation(formula[priorityOperationIndex], out operationResult, x, y);
+                if (opError != ErrorCode.Success)
+                {
+                    return opError;
+                }
+                formula = formula.Replace(formula.Substring(expressionIndexLeft, expressionIndexRight - expressionIndexLeft + 1), operationResult.ToString());
+                formula = formula.Replace("+-", "-");
+                formula = formula.Replace("--", "+");
+            }
+
+            Console.WriteLine($"FinalText: {formula}");
+
+
+            if (!double.TryParse(formula, out result))
+            {
+                return ErrorCode.InvalidOutputFormula;
+            }
+
+            result *= negativeSwitch;
+            if (result.ToString().Contains("E"))
+            {
+                result = Math.Round(result, 2);
+            } else
+            {
+                result = Math.Round(result, 10);
+            }
+
+            return ErrorCode.Success;
         }
 
         public Calculator()
@@ -158,7 +345,7 @@ namespace Calculator
         //erase last added number
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length > 1)
+            if (textBox_Result.Text.Length > 1 && !errorDisplay)
             {
                 if (textBox_Result.Text[textBox_Result.TextLength-1] == '.')
                 {
@@ -173,6 +360,7 @@ namespace Calculator
             {
                 textBox_Result.Text = "0";
             }
+            errorDisplay = false;
         }
 
         //erase everything in textBox
@@ -180,6 +368,7 @@ namespace Calculator
         {
             textBox_Result.Clear();
             textBox_Result.Text = "0";
+            errorDisplay = false;
         }
 
         private void btnFactorial_Click(object sender, EventArgs e)
@@ -199,9 +388,9 @@ namespace Calculator
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
-                if (!isLastNumeric(textBox_Result.Text))
+                if (!isLastNumeric(textBox_Result.Text) && !lastEquals(textBox_Result.Text, '.'))
                 {
                     textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
                 }
@@ -214,9 +403,9 @@ namespace Calculator
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
-                if (!isLastNumeric(textBox_Result.Text))
+                if (!isLastNumeric(textBox_Result.Text) && !lastEquals(textBox_Result.Text, '.'))
                 {
                     textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
                 }
@@ -229,17 +418,29 @@ namespace Calculator
 
         private void btnAbs_Click(object sender, EventArgs e)
         {
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay)
+            {
+                string text = textBox_Result.Text;
+                if (!isLastNumeric(text))
+                {
+                    return;
+                }
+                int expressionLeft = text.Length - 1;
+                for (int i = text.Length-1; i >= 0 && (isNumeric(text[i]) || text[i] == '.'); i--)
+                {
+                    expressionLeft = i;
+                }
 
+                text = text.Insert(expressionLeft, "|");
+                text = text.Insert(text.Length, "|");
+                textBox_Result.Text = text;
+            }
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
-                if (!isLastNumeric(textBox_Result.Text))
-                {
-                    textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
-                }
                 textBox_Result.Text += "-";
                 pointAllowedPrevious = pointAllowed;
                 pointAllowed = true;
@@ -249,12 +450,8 @@ namespace Calculator
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
-                if (!isLastNumeric(textBox_Result.Text))
-                {
-                    textBox_Result.Text = textBox_Result.Text.Remove(textBox_Result.TextLength - 1);
-                }
                 textBox_Result.Text += "+";
                 pointAllowedPrevious = pointAllowed;
                 pointAllowed = true;
@@ -264,7 +461,7 @@ namespace Calculator
 
         private void btnPoint_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing dot to text field, will print it only once
                 if (isLastNumeric(textBox_Result.Text) && pointAllowed)
@@ -278,74 +475,24 @@ namespace Calculator
         }
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            string text = textBox_Result.Text;
-            if (!isLastNumeric(text))
-                return;
-
-            int operatorCount = 0;
-
-            foreach (char ch in text)
+            if (errorDisplay) return;
+            pointAllowed = true;
+            double result;
+            ErrorCode parseError = ParseFormula(textBox_Result.Text, out result);
+            if (parseError != ErrorCode.Success)
             {
-                if (!isNumeric(ch) && ch != '.')
-                {
-                    operatorCount++;
-                }
+                textBox_Result.Text = ErrorMessage(parseError);
+                errorDisplay = true;
+            } else
+            { 
+                textBox_History.Text = textBox_Result.Text;
+                textBox_Result.Text = result.ToString();
             }
-
-            for (int u = 0; u < operatorCount; u++)
-            {
-                int priorityOperationIndex = -1;
-
-                for (int i = 0; i < text.Length; i++)
-                {
-                    if (!isNumeric(text[i]) && text[i] != '.')
-                    {
-                        if (priorityOperationIndex == -1)
-                        {
-                            priorityOperationIndex = i;
-                        }
-                        else
-                        {
-                            if (Array.IndexOf(priorityOrder, text[i]) < Array.IndexOf(priorityOrder, text[priorityOperationIndex]))
-                            {
-                                priorityOperationIndex = i;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-
-                string left = "", right = "";
-                int expressionIndexLeft = priorityOperationIndex, expressionIndexRight = priorityOperationIndex;
-
-                for (int i = priorityOperationIndex - 1; i >= 0 && (isNumeric(text[i]) || text[i] == '.'); i--)
-                {
-                    left = left.Insert(0, text[i].ToString());
-                    expressionIndexLeft = i;
-                }
-                for (int i = priorityOperationIndex + 1; i < text.Length && (isNumeric(text[i]) || text[i] == '.'); i++)
-                {
-                    right += text[i].ToString();
-                    expressionIndexRight = i;
-                }
-
-                // TODO: Globalized decimal point instead of this
-                double x = double.Parse(left, System.Globalization.CultureInfo.InvariantCulture);
-                double y = double.Parse(right, System.Globalization.CultureInfo.InvariantCulture);
-
-                double result = PerformOperation(text[priorityOperationIndex], x, y);
-                text = text.Replace(text.Substring(expressionIndexLeft, expressionIndexRight - expressionIndexLeft + 1), result.ToString());
-            }
-            textBox_History.Text = textBox_Result.Text;
-            textBox_Result.Text = text;
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput)
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -354,15 +501,14 @@ namespace Calculator
                 }
                 else
                 {
-                    if (isLastNumeric(textBox_Result.Text) || textBox_Result.Text[textBox_Result.Text.Length-1] == '.')
-                        textBox_Result.Text += "0";
+                    textBox_Result.Text += "0";
                 }
             }
             
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput)
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -380,7 +526,7 @@ namespace Calculator
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -396,7 +542,7 @@ namespace Calculator
         }
         private void btn3_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -412,7 +558,7 @@ namespace Calculator
         }
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput)
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -428,7 +574,7 @@ namespace Calculator
         }
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput)
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -444,7 +590,7 @@ namespace Calculator
         }
         private void btn6_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -460,7 +606,7 @@ namespace Calculator
         }
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput)
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -476,7 +622,7 @@ namespace Calculator
         }
         private void btn8_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -492,7 +638,7 @@ namespace Calculator
         }
         private void btn9_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
