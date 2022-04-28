@@ -34,8 +34,6 @@ namespace MathTests
             Assert.AreEqual(-1337.000001, MathLib.Add(-4200.987654, 2863.987653), 0.0000001);
             Assert.AreEqual(0, MathLib.Add(69, -69));
             Assert.AreEqual(0, MathLib.Add(-69, 69));
-
-            //Assert.ThrowsException<OverflowException>(() => MathLib.Add(long.MaxValue, long.MaxValue), "Overflow occured!");
         }
 
         [TestMethod]
