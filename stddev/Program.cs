@@ -11,7 +11,6 @@ namespace Profiler
     {
         static void Main(string[] args)
         {
-
             string input;
             List<double> array = new List<double>();
             double sum = 0;
@@ -19,8 +18,8 @@ namespace Profiler
             while ((input = Console.ReadLine()) != null && input != "")
             {
                 double num = 0;
-                string[] splitted = input.Split(new char[] { ' ', '\r', '\n', '\t' });
-                foreach(string s in splitted)
+                string[] stringNumbers = input.Split(new char[] { ' ', '\r', '\n', '\t' });
+                foreach(string s in stringNumbers)
                 {
                     Console.WriteLine(s);
                     if(!double.TryParse(s, out num))
