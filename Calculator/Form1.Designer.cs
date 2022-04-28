@@ -63,9 +63,9 @@
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(25, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 32);
+            this.label1.Size = new System.Drawing.Size(144, 32);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Help Page";
+            this.label1.Text = "Nápoveda";
             // 
             // label2
             // 
@@ -73,7 +73,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(26, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(644, 350);
+            this.label2.Size = new System.Drawing.Size(661, 375);
             this.label2.TabIndex = 33;
             this.label2.Text = resources.GetString("label2.Text");
             // 
