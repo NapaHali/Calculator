@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>del      Delete last inputed character
+    <value>del      Delete last input character
 C         Clear everything
 
-Numbers and basic mathematical operations can be inputted also by keyboard
+Numbers and this mathematical operations can be input also by keyboard
 +         Addition
 -          Substraction
 *          Multiplication
 /          Division
-
-Other mathematical operation - this can't be inputted by keyboard
 !          Factorial
+
+Other mathematical operation - this can not be input by keyboard
 |x|       Absolute value
 y√x     Yth root of X
 x^y     X to the power of Y
