@@ -49,6 +49,8 @@ namespace Calculator
         const int maximalInput = 32;                        // digits of biggest number that can be inputted
         public static bool helpPageOpen= false;                     //bool for opening the help popup
 
+
+        
         private string ErrorMessage(ErrorCode code)
         {
             switch (code)
