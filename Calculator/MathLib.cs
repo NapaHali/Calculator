@@ -57,7 +57,7 @@ namespace Calculator
 
         public static double Root(double x, int exponent)
         {
-            int precision = 10;
+            int precision = 50;
             double result = 1;
             for (int i = 0; i < precision; i++)
             {

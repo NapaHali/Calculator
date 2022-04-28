@@ -118,20 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>del      Delete last inputed character
-C         Clear everything
+    <value>del      Vymaže posledný vložený znak
+C         Vymaže všetko
 
-Numbers and basic mathematical operations can be inputted also by keyboard
-+         Addition
--          Substraction
-*          Multiplication
-/          Division
+Čísla a matematické operácie, ktoré je možné zadať aj pomocou klávesnice
++         Sčítanie
+-          Odčítanie
+*          Násobenie
+/          Delenie
+!          Faktoriál
 
-Other mathematical operation - this can't be inputted by keyboard
-!          Factorial
-|x|       Absolute value
-y√x     Yth root of X
-x^y     X to the power of Y
+Iné matematické operácie, ktoré nie je možné zadať pomocou klávesnice
+|x|       Absolútna hodnota - zadať hodnoty a následne stlačiť tlačidla |x| 
+y√x     Ytá odmocniza z X -  zadať X stlačiť tlačidlo y√x a následne zadať Y
+x^y     X umocnené na Y - zadať X stlačiť tlačidlo a následne zadať Y
+
 </value>
   </data>
 </root>
