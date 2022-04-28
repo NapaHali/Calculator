@@ -1,9 +1,12 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
+using System.Collections.Generic;
 
 namespace Calculator
 {
     public static class MathLib
     {
+
         public static double Add(double x, double y)
         {
             return x+y;
@@ -29,11 +32,30 @@ namespace Calculator
         public static BigInteger Factorial(int n)
         {
             // int exponent = num == 0 ? 0 : (int)Math.Floor((Math.Log10(Math.Abs(num))));
-            if (n == 1)
+            if(n == 0)
+            {
+                throw new ArithmeticException();
+            }
+            else if (n > 3248)
+            {
+                throw new OverflowException();
+            }
+
+            if(n == 1)
             {
                 return BigInteger.One;
             }
-            return (BigInteger)n * Factorial(n-1);
+
+            BigInteger result = 1;
+            int count = n;
+            while(count != 1)
+            {
+                result *= count;
+                count--;
+            }
+
+
+            return result;
         }
 
         public static double Power(double x, int exponent)
@@ -71,6 +93,18 @@ namespace Calculator
         public static double Abs(double x)
         {
             return x >= 0 ? x : -x;
+        }
+
+        public static string ToScientificNotation(BigInteger num)
+        {
+            string result = num.ToString();
+            short exponent = (short)(result.Length - 1);
+
+            result = result.Insert(1, ".");
+            result = result.Substring(0, 12); // Why 12? Because the result will be rounded to 10 decimal numbers (x.0000000000)
+            result = result.Insert(result.Length, "E+" + exponent);
+
+            return result;
         }
     }
 }

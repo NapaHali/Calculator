@@ -45,7 +45,7 @@ namespace MathTests
             var decimalPlaces = GetDecimalPlaces(multiplier);
             var power = (int)Math.Pow(10, decimalPlaces);
 
-            return (BigInteger.Pow(10, exponent) * (int)(multiplier * power)) / power;
+            return (BigInteger.Pow(10, exponent) * (BigInteger)(multiplier * power)) / power;
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace MathTests
         {
             Assert.AreNotEqual(5, MathLib.Factorial(3));
           
-            BigInteger[] factorials = { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 
+            BigInteger[] factorials = { 0, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 
                 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000, BigInteger.Parse("51090942171709440000"),
                 BigInteger.Parse("1124000727777607680000"), BigInteger.Parse("25852016738884976640000"), BigInteger.Parse("620448401733239439360000"),
                 BigInteger.Parse("15511210043330985984000000"), BigInteger.Parse("403291461126605635584000000"), BigInteger.Parse("10888869450418352160768000000"),
@@ -147,13 +147,19 @@ namespace MathTests
 
             for (int i = 0; i < 30; i++)
             {
-                Assert.AreEqual(factorials[i], MathLib.Factorial(i));
+                if(i == 0)
+                {
+                    Assert.ThrowsException<ArithmeticException>(() => MathLib.Factorial(i), "Arithmetic exception occured!");
+                } else
+                {
+                    Assert.AreEqual(factorials[i], MathLib.Factorial(i));
+                }
             }
 
-            Assert.AreEqual(ParseExtended("4.02387260077093773543702433923e2567"), MathLib.Factorial(1000));
-            Assert.AreEqual(ParseExtended("3.3162750924506332411753933805763e5735"), MathLib.Factorial(2000));
-            Assert.AreEqual(ParseExtended("4.1493596034378540855568670930866e9130"), MathLib.Factorial(3000));
-            Assert.AreEqual(ParseExtended("1.9736342530860425312047080034031e9997"), MathLib.Factorial(3248));
+            Assert.AreEqual("4.0238726007E+2567", MathLib.ToScientificNotation(MathLib.Factorial(1000)));
+            Assert.AreEqual("3.3162750924E+5735", MathLib.ToScientificNotation(MathLib.Factorial(2000)));
+            Assert.AreEqual("4.1493596034E+9130", MathLib.ToScientificNotation(MathLib.Factorial(3000)));
+            Assert.AreEqual("1.9736342530E+9997", MathLib.ToScientificNotation(MathLib.Factorial(3248)));
 
             Assert.ThrowsException<OverflowException>(() => MathLib.Factorial(3249), "Overflow occured!");
         }
