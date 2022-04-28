@@ -15,7 +15,6 @@ namespace Calculator
         private string formula = "";
         private bool pointAllowed = true;
         private bool pointAllowedPrevious = true;
-        //private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         private char[] priorityOrder = new char[] { '÷', '*', '+', '-' };
@@ -520,24 +519,6 @@ namespace Calculator
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            //maximizing and getting it back to it's original size
-        //    switch (maximizeWindow)
-        //    {
-        //        case false:
-        //            WindowState = FormWindowState.Maximized;
-        //            maximizeWindow = true;
-        //           break;
-        //
-        //        case true:
-        //            WindowState = FormWindowState.Normal;
-        //            maximizeWindow = false;
-        //            break;
-        //        
-        //    }
         }
 
         //when the left mouse button is pressed down on specific places, the object is draggable
