@@ -20,6 +20,7 @@ enum ErrorCode
     InvalidPowerY,
     InvalidFactorial,
     MathError,
+    OverflowError,
     InternalError
 }
 enum CalculatorState
@@ -58,6 +59,8 @@ namespace Calculator
                     return "Syntax error.";
                 case ErrorCode.MathError:
                     return "Math error.";
+                case ErrorCode.OverflowError:
+                    return "Overflow error.";
                 case ErrorCode.DivideByZeroError:
                     return "Can't divide by zero.";
                 case ErrorCode.InvalidRootY:
@@ -393,11 +396,13 @@ namespace Calculator
 
             if (parseError != ErrorCode.Success)
             {
+                textBox_History.Text = textBox_Result.Text;
                 textBox_Result.Text = ErrorMessage(parseError);
                 errorDisplay = true;
                 pointAllowed = true;
             } else if (parseErrorFuncY != ErrorCode.Success)
             {
+                textBox_History.Text = textBox_Result.Text;
                 textBox_Result.Text = ErrorMessage(parseErrorFuncY);
                 errorDisplay = true;
                 pointAllowed = true;

@@ -45,6 +45,7 @@ namespace Calculator
                     try
                     {
                         result = (double)MathLib.Factorial(Convert.ToInt32(x));
+                        if (double.IsInfinity(result)) return ErrorCode.OverflowError;
                     }
                     catch
                     {
