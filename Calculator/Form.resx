@@ -1748,7 +1748,7 @@
     <value>61, 48</value>
   </data>
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 48</value>
+    <value>61, 46</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -1783,11 +1783,8 @@
   <data name="textBox_Result.MaxLength" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="textBox_Result.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>587, 68</value>
-  </data>
   <data name="textBox_Result.Size" type="System.Drawing.Size, System.Drawing">
-    <value>587, 68</value>
+    <value>587, 75</value>
   </data>
   <data name="textBox_Result.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -1826,7 +1823,7 @@
     <value>587, 30</value>
   </data>
   <data name="textBox_History.Size" type="System.Drawing.Size, System.Drawing">
-    <value>587, 30</value>
+    <value>587, 37</value>
   </data>
   <data name="textBox_History.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
