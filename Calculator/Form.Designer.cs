@@ -406,6 +406,7 @@
             // textBox_Result
             // 
             this.textBox_Result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.textBox_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBox_Result, "textBox_Result");
             this.textBox_Result.ForeColor = System.Drawing.Color.White;
             this.textBox_Result.Name = "textBox_Result";
@@ -417,6 +418,7 @@
             // 
             resources.ApplyResources(this.textBox_History, "textBox_History");
             this.textBox_History.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.textBox_History.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_History.ForeColor = System.Drawing.Color.Gainsboro;
             this.textBox_History.Name = "textBox_History";
             this.textBox_History.ReadOnly = true;

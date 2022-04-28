@@ -525,8 +525,12 @@ namespace Calculator
         //startPoint- position the calculator window on the monitor 
         private void Calculator_MouseDown(object sender, MouseEventArgs e)
         {
-            dragging = true;
-            startPoint = new Point(e.X, e.Y);
+            if(e.X < 484 && e.Y < 41)
+            {
+                dragging = true;
+                startPoint = new Point(e.X, e.Y);
+            }
+            
         }
 
         //releasing the left mouse button mean end of dragging
