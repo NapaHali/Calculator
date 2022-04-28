@@ -24,7 +24,6 @@ namespace Calculator
         private bool errorDisplay = false;
         private bool pointAllowed = true;
         private bool pointAllowedPrevious = true;
-        //private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         private char[] priorityOrder = new char[] { '÷', '*', '-', '+' };
@@ -668,24 +667,6 @@ namespace Calculator
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            //maximizing and getting it back to it's original size
-        //    switch (maximizeWindow)
-        //    {
-        //        case false:
-        //            WindowState = FormWindowState.Maximized;
-        //            maximizeWindow = true;
-        //           break;
-        //
-        //        case true:
-        //            WindowState = FormWindowState.Normal;
-        //            maximizeWindow = false;
-        //            break;
-        //        
-        //    }
-        }
-
         //when the left mouse button is pressed down on specific places, the object is draggable
         //startPoint- position the calculator window on the monitor 
         private void Calculator_MouseDown(object sender, MouseEventArgs e)
@@ -717,14 +698,15 @@ namespace Calculator
             textBox_Result.Font = new Font(textBox_Result.Font.Name, textFontChange);
 
             Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
-            if (s.Width >= ((textBox_Result.Width) -textFontChange) && textFontChange > minFontSize) 
+
+            if (s.Width >= ((textBox_Result.Width) - maxFontSize) && textFontChange > minFontSize) 
             {
-                textFontChange -= 1;        //fluently decrasing font size
+                textFontChange -= 2;        //fluently decreasing font size
             }
 
-            if (s.Width < ((textBox_Result.Width) - textFontChange)  && textFontChange< maxFontSize)
+            if (s.Width < ((textBox_Result.Width) - maxFontSize)  && textFontChange < maxFontSize)
             {
-                textFontChange += 1;        //fluently increasing font size
+                textFontChange += 2;        //fluently increasing font size
             }
 
         }
