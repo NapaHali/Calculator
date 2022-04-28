@@ -571,14 +571,15 @@ namespace Calculator
             textBox_Result.Font = new Font(textBox_Result.Font.Name, textFontChange);
 
             Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
-            if (s.Width >= ((textBox_Result.Width) -textFontChange) && textFontChange > minFontSize) 
+
+            if (s.Width >= ((textBox_Result.Width) -maxFontSize) && textFontChange > minFontSize) 
             {
-                textFontChange -= 1;        //fluently decrasing font size
+                textFontChange -= 2;        //fluently decrasing font size
             }
 
-            if (s.Width < ((textBox_Result.Width) - textFontChange)  && textFontChange< maxFontSize)
+            if (s.Width < ((textBox_Result.Width) - maxFontSize)  && textFontChange< maxFontSize)
             {
-                textFontChange += 1;        //fluently increasing font size
+                textFontChange += 2;        //fluently increasing font size
             }
 
         }
