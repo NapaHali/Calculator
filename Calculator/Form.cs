@@ -222,7 +222,7 @@ namespace Calculator
 
         private void btnFactorial_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput && !errorDisplay)
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && calcState != CalculatorState.AbsValue)
             {
                 if (!StringOperations.isLastNumeric(textBox_Result.Text) && !StringOperations.lastEquals(textBox_Result.Text, parser.decimalSeparator) && (calcState != CalculatorState.Normal && textBox_Result.Text.Length - 1 != funcEndIndex))
                 {
@@ -270,7 +270,7 @@ namespace Calculator
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && calcState != CalculatorState.AbsValue)
             {
                 if (!StringOperations.isLastNumeric(textBox_Result.Text) && !StringOperations.lastEquals(textBox_Result.Text, parser.decimalSeparator) && (calcState != CalculatorState.Normal && textBox_Result.Text.Length - 1 != funcEndIndex))
                 {
@@ -285,7 +285,7 @@ namespace Calculator
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && calcState != CalculatorState.AbsValue)
             {
                 if (!StringOperations.isLastNumeric(textBox_Result.Text) && !StringOperations.lastEquals(textBox_Result.Text, parser.decimalSeparator) && (calcState != CalculatorState.Normal && textBox_Result.Text.Length - 1 != funcEndIndex))
                 {
@@ -316,7 +316,7 @@ namespace Calculator
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && calcState != CalculatorState.AbsValue)
             {
                 textBox_Result.Text += "-";
                 pointAllowedPrevious = pointAllowed;
@@ -327,7 +327,7 @@ namespace Calculator
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay)
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && calcState != CalculatorState.AbsValue)
             {
                 textBox_Result.Text += "+";
                 pointAllowedPrevious = pointAllowed;
@@ -441,7 +441,7 @@ namespace Calculator
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -459,7 +459,7 @@ namespace Calculator
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -475,7 +475,7 @@ namespace Calculator
         }
         private void btn3_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -491,7 +491,7 @@ namespace Calculator
         }
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -507,7 +507,7 @@ namespace Calculator
         }
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -523,7 +523,7 @@ namespace Calculator
         }
         private void btn6_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -539,7 +539,7 @@ namespace Calculator
         }
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if (textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -555,7 +555,7 @@ namespace Calculator
         }
         private void btn8_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
@@ -571,7 +571,7 @@ namespace Calculator
         }
         private void btn9_Click(object sender, EventArgs e)
         {
-            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!'))
+            if(textBox_Result.Text.Length < maximalInput && !errorDisplay && !StringOperations.lastEquals(textBox_Result.Text, '!') && calcState != CalculatorState.AbsValue)
             {
                 //printing number to text field
                 if (textBox_Result.Text == "0")
