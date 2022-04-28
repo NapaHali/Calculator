@@ -53,7 +53,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.textBox_Result = new System.Windows.Forms.TextBox();
             this.textBox_History = new System.Windows.Forms.TextBox();
@@ -392,17 +391,6 @@
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // btnMaximize
-            // 
-            resources.ApplyResources(this.btnMaximize, "btnMaximize");
-            this.btnMaximize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnMaximize.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
             // btnExit
             // 
             resources.ApplyResources(this.btnExit, "btnExit");
@@ -443,7 +431,6 @@
             this.Controls.Add(this.textBox_History);
             this.Controls.Add(this.textBox_Result);
             this.Controls.Add(this.btnMinimize);
-            this.Controls.Add(this.btnMaximize);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.btnPoint);
@@ -509,7 +496,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox textBox_Result;
         private System.Windows.Forms.TextBox textBox_History;
