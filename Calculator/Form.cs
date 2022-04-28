@@ -23,7 +23,7 @@ namespace Calculator
         const int maxFontSize = 36;                         // original size of textBox_Result text size
         const int minFontSize = 10;                         // minimal size for text size in textBox_Result
         const int maximalInput = 32;                        // digits of biggest number that can be inputted
-        public static bool helpPageNotOpen= true;                     //bool for opening the help popup
+        public static bool helpPageOpen= false;                     //bool for opening the help popup
         private bool isNumeric(char ch)
         {
             return int.TryParse(ch.ToString(), out _);
@@ -150,9 +150,9 @@ namespace Calculator
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            if (helpPageNotOpen)    //checking if the help window is open
+            if (!helpPageOpen)    //checking if the help window is open
             {
-                helpPageNotOpen = false;
+                helpPageOpen = true;
                 HelpForm formHelp = new HelpForm();
                 formHelp.Show();
 

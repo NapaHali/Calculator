@@ -19,14 +19,10 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Calculator.helpPageNotOpen = true;       //bool from Calculator form
+            Calculator.helpPageOpen = false;       //bool from Calculator form
             Close();
         }
         private void Help_MouseDown(object sender, MouseEventArgs e)
