@@ -3,19 +3,41 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Numerics;
 
+/// <summary>
+/// NUnit tests for MathLib operations
+/// </summary>
 namespace MathTests
 {
+    /// <summary>
+    /// OperationsTests class initialized by NUnit tester
+    /// </summary>
     [TestClass]
     public class OperationsTests
     {
+        /// <summary>
+        /// Decomposes number in string format that uses scientific notation
+        /// </summary>
+        /// <param name="value">The number with scientific notation in string format</param>
+        /// <returns>Number decomposed to base and exponent after the scientific notation</returns>
         public static (decimal multiplier, int exponent) Decompose(string value)
         {
             var split = value.Split('e');
             return (decimal.Parse(split[0]), int.Parse(split[1]));
         }
+
+        /// <summary>
+        /// Returns the number of decimal places in specified number
+        /// </summary>
+        /// <param name="value">The number in which the count of decimal places will be calculated</param>
+        /// <returns>Number of decimal places</returns>
         public static int GetDecimalPlaces(decimal value)
            => BitConverter.GetBytes(decimal.GetBits(value)[3])[2];
 
+        /// <summary>
+        /// Decomposes number in string format that uses scientific notation and returns it in BigInteger format
+        /// </summary>
+        /// <param name="value">The number in string format</param>
+        /// <returns>BigInteger number without scientific notation</returns>
         public static BigInteger ParseExtended(string value)
         {
             var (multiplier, exponent) = Decompose(value);
@@ -26,6 +48,9 @@ namespace MathTests
             return (BigInteger.Pow(10, exponent) * (int)(multiplier * power)) / power;
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate addition
+        /// </summary>
         [TestMethod]
         public void Add()
         {
@@ -34,8 +59,13 @@ namespace MathTests
             Assert.AreEqual(-1337.000001, MathLib.Add(-4200.987654, 2863.987653), 0.0000001);
             Assert.AreEqual(0, MathLib.Add(69, -69));
             Assert.AreEqual(0, MathLib.Add(-69, 69));
+
+            //Assert.ThrowsException<OverflowException>(() => MathLib.Add(long.MaxValue, long.MaxValue), "Overflow occured!");
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate substraction
+        /// </summary>
         [TestMethod]
         public void Substract()
         {
@@ -54,6 +84,9 @@ namespace MathTests
             //Assert.ThrowsException<OverflowException>(() => MathLib.Substract(long.MinValue, long.MaxValue), "Overflow occured!");
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate multiplication
+        /// </summary>
         [TestMethod]
         public void Multiply()
         {
@@ -75,6 +108,9 @@ namespace MathTests
             Assert.AreNotEqual(-1, MathLib.Multiply(-1, -1));
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate division
+        /// </summary>
         [TestMethod]
         public void Divide()
         {
@@ -95,6 +131,9 @@ namespace MathTests
             Assert.AreEqual(-2.5, MathLib.Divide(0.25, -0.1), 0.01);
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate factorial function
+        /// </summary>
         [TestMethod]
         public void Factorial()
         {
@@ -119,6 +158,9 @@ namespace MathTests
             Assert.ThrowsException<OverflowException>(() => MathLib.Factorial(3249), "Overflow occured!");
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate power function
+        /// </summary>
         [TestMethod]
         public void Power()
         {
@@ -136,6 +178,9 @@ namespace MathTests
             }
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate root function
+        /// </summary>
         [TestMethod]
         public void Root()
         {
@@ -156,6 +201,9 @@ namespace MathTests
             }
         }
 
+        /// <summary>
+        /// TestMethod that tests the MathLib capability to evaluate absolute value of a number
+        /// </summary>
         [TestMethod]
         public void Abs()
         {

@@ -5,10 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Calculator;
 
+/// <summary>
+/// Profiler namespace
+/// </summary>
 namespace Profiler
 {
+    /// <summary>
+    /// Console application used to calculate the sample standard deviation
+    /// </summary>
     internal class Program
     {
+        /// <summary>
+        /// The entry point of the application where the reading and calculation happens
+        /// </summary>
+        /// <param name="args">Arguments passed in command line</param>
         static void Main(string[] args)
         {
             string input;
@@ -21,7 +31,6 @@ namespace Profiler
                 string[] stringNumbers = input.Split(new char[] { ' ', '\r', '\n', '\t' });
                 foreach(string s in stringNumbers)
                 {
-                    Console.WriteLine(s);
                     if(!double.TryParse(s, out num))
                     {
                         Console.WriteLine("Neplatny vstup.");
