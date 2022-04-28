@@ -27,8 +27,12 @@ namespace Calculator
         }
         private void Help_MouseDown(object sender, MouseEventArgs e)
         {
-            dragging = true;
-            startPoint = new Point(e.X, e.Y);
+            if (e.X < 779 && e.Y < 46)
+            {
+                dragging = true;
+                startPoint = new Point(e.X, e.Y);
+            }
+            
         }
 
         //releasing the left mouse button mean end of dragging

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="btnPlus.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnPlus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -139,13 +142,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnPlus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 415</value>
+    <value>364, 511</value>
   </data>
   <data name="btnPlus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnPlus.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnPlus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnPlus.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -165,6 +171,9 @@
   <data name="&gt;&gt;btnPlus.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="btnPoint.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnPoint.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -184,13 +193,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnPoint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 415</value>
+    <value>245, 511</value>
   </data>
   <data name="btnPoint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnPoint.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnPoint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnPoint.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -210,6 +222,9 @@
   <data name="&gt;&gt;btnPoint.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="btn0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn0.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -226,13 +241,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 415</value>
+    <value>7, 511</value>
   </data>
   <data name="btn0.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn0.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>232, 78</value>
   </data>
   <data name="btn0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 63</value>
+    <value>232, 78</value>
   </data>
   <data name="btn0.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -252,6 +270,9 @@
   <data name="&gt;&gt;btn0.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="btnEquals.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnEquals.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -271,13 +292,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnEquals.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 347</value>
+    <value>483, 427</value>
   </data>
   <data name="btnEquals.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnEquals.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 162</value>
   </data>
   <data name="btnEquals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 132</value>
+    <value>113, 162</value>
   </data>
   <data name="btnEquals.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -297,6 +321,9 @@
   <data name="&gt;&gt;btnEquals.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="btnMinus.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnMinus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -316,13 +343,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnMinus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 347</value>
+    <value>364, 427</value>
   </data>
   <data name="btnMinus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnMinus.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnMinus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnMinus.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -342,6 +372,9 @@
   <data name="&gt;&gt;btnMinus.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="btn3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -361,13 +394,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 347</value>
+    <value>245, 427</value>
   </data>
   <data name="btn3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn3.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -387,6 +423,9 @@
   <data name="&gt;&gt;btn3.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="btn2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -406,13 +445,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 347</value>
+    <value>126, 427</value>
   </data>
   <data name="btn2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -432,6 +474,9 @@
   <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="btn1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -448,13 +493,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 347</value>
+    <value>7, 427</value>
   </data>
   <data name="btn1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -474,6 +522,9 @@
   <data name="&gt;&gt;btn1.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="btnAbs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnAbs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -493,13 +544,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnAbs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 279</value>
+    <value>483, 343</value>
   </data>
   <data name="btnAbs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnAbs.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnAbs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnAbs.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -519,6 +573,9 @@
   <data name="&gt;&gt;btnAbs.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <metadata name="btnMultiply.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnMultiply.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -538,13 +595,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnMultiply.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 279</value>
+    <value>364, 343</value>
   </data>
   <data name="btnMultiply.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnMultiply.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnMultiply.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnMultiply.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -564,6 +624,9 @@
   <data name="&gt;&gt;btnMultiply.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <metadata name="btn6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -583,13 +646,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 279</value>
+    <value>245, 343</value>
   </data>
   <data name="btn6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn6.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn6.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -609,6 +675,9 @@
   <data name="&gt;&gt;btn6.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="btn5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -628,13 +697,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 279</value>
+    <value>126, 343</value>
   </data>
   <data name="btn5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn5.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn5.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -654,6 +726,9 @@
   <data name="&gt;&gt;btn5.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <metadata name="btn4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -670,13 +745,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 279</value>
+    <value>7, 343</value>
   </data>
   <data name="btn4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn4.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn4.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -696,6 +774,9 @@
   <data name="&gt;&gt;btn4.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <metadata name="btnPower.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnPower.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -917,13 +998,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnPower.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 210</value>
+    <value>483, 259</value>
   </data>
   <data name="btnPower.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnPower.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnPower.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnPower.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -940,6 +1024,9 @@
   <data name="&gt;&gt;btnPower.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <metadata name="btnDivide.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnDivide.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -959,13 +1046,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnDivide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 210</value>
+    <value>364, 259</value>
   </data>
   <data name="btnDivide.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnDivide.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnDivide.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnDivide.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -985,6 +1075,9 @@
   <data name="&gt;&gt;btnDivide.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <metadata name="btn9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1004,13 +1097,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 210</value>
+    <value>245, 259</value>
   </data>
   <data name="btn9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn9.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn9.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1030,6 +1126,9 @@
   <data name="&gt;&gt;btn9.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <metadata name="btn8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1049,13 +1148,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 210</value>
+    <value>126, 259</value>
   </data>
   <data name="btn8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn8.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn8.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1075,6 +1177,9 @@
   <data name="&gt;&gt;btn8.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <metadata name="btn7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1091,13 +1196,16 @@
     <value>NoControl</value>
   </data>
   <data name="btn7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 210</value>
+    <value>7, 259</value>
   </data>
   <data name="btn7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btn7.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btn7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btn7.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1117,6 +1225,9 @@
   <data name="&gt;&gt;btn7.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <metadata name="btnRoot.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnRoot.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1331,13 +1442,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnRoot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 142</value>
+    <value>483, 175</value>
   </data>
   <data name="btnRoot.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRoot.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnRoot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnRoot.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -1354,6 +1468,9 @@
   <data name="&gt;&gt;btnRoot.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <metadata name="btnFactorial.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnFactorial.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1373,13 +1490,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnFactorial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 142</value>
+    <value>364, 175</value>
   </data>
   <data name="btnFactorial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnFactorial.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnFactorial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnFactorial.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1399,6 +1519,9 @@
   <data name="&gt;&gt;btnFactorial.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
+  <metadata name="btnClear.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnClear.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1418,13 +1541,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 142</value>
+    <value>245, 175</value>
   </data>
   <data name="btnClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnClear.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -1444,6 +1570,9 @@
   <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <metadata name="btnDelete.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1463,13 +1592,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 142</value>
+    <value>126, 175</value>
   </data>
   <data name="btnDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnDelete.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -1489,6 +1621,9 @@
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <metadata name="btnHelp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnHelp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1505,13 +1640,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 142</value>
+    <value>7, 175</value>
   </data>
   <data name="btnHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnHelp.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>113, 78</value>
   </data>
   <data name="btnHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 63</value>
+    <value>113, 78</value>
   </data>
   <data name="btnHelp.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -1531,6 +1669,9 @@
   <data name="&gt;&gt;btnHelp.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <metadata name="btnMinimize.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnMinimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1547,13 +1688,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnMinimize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 1</value>
+    <value>484, 1</value>
   </data>
   <data name="btnMinimize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnMinimize.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>55, 41</value>
   </data>
   <data name="btnMinimize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 33</value>
+    <value>55, 41</value>
   </data>
   <data name="btnMinimize.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -1573,6 +1717,9 @@
   <data name="&gt;&gt;btnMinimize.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="btnExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1592,13 +1739,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 1</value>
+    <value>545, 1</value>
   </data>
   <data name="btnExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnExit.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>61, 48</value>
   </data>
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 37</value>
+    <value>61, 46</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -1625,19 +1775,16 @@
     <value>Microsoft Sans Serif, 36pt</value>
   </data>
   <data name="textBox_Result.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 74</value>
+    <value>7, 91</value>
   </data>
   <data name="textBox_Result.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="textBox_Result.MaxLength" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="textBox_Result.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 62</value>
-  </data>
   <data name="textBox_Result.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 62</value>
+    <value>587, 75</value>
   </data>
   <data name="textBox_Result.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -1667,10 +1814,16 @@
     <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
   <data name="textBox_History.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 39</value>
+    <value>7, 48</value>
+  </data>
+  <data name="textBox_History.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textBox_History.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>587, 30</value>
   </data>
   <data name="textBox_History.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 24</value>
+    <value>587, 37</value>
   </data>
   <data name="textBox_History.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -1694,13 +1847,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>454, 486</value>
+    <value>605, 598</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1813,8 +1966,11 @@
         jEZGQ+ME41ijXuVpfViC/v8B1RM6JUBTZhAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>7, 6, 7, 6</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Calculator</value>
