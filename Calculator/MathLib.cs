@@ -80,14 +80,28 @@ namespace Calculator
         public static double Root(double x, int exponent)
         {
             if (x == 0 || x == 1) return x;
+            if (exponent == 0) return double.NaN;
 
-            int precision = 50;
+            int negativeSwitch = 1;
+
+            if (x < 0 && exponent % 2 != 0)
+            {
+                negativeSwitch = -1;
+                x = -x;
+            }
+
+            if (x < 0 && exponent % 2 == 0)
+            {
+                return double.NaN;
+            }
+
+            int precision = 100;
             double result = 1;
             for (int i = 0; i < precision; i++)
             {
                 result = result - (Power(result, exponent) - x) / (exponent * Power(result, exponent - 1));
             }
-            return result;
+            return result * negativeSwitch;
         }
 
         public static double Abs(double x)
