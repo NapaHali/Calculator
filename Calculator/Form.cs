@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Globalization;
 
 /// <para>ErrorCode enumerator</para>
-/// <list type="=bullet">
+/// <list type="bullet">
 /// <item>Success</item>
 /// <item>SyntaxError</item>
 /// <item>InvalidOperation</item>
@@ -39,7 +39,7 @@ enum ErrorCode
 }
 
 /// <para>CalculatorState enumerator</para>
-/// <list type="=bullet">
+/// <list type="bullet">
 /// <item>Normal</item>
 /// <item>AbsValue</item>
 /// <item>Root</item>
