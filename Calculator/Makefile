@@ -3,16 +3,22 @@
 all: run
 
 pack:
-	powershell Compress-Archive ../../xkopac07_xvarga21_xbuday05_xmasle01 ../../xkopac07_xvarga21_xbuday05_xmasle01.zip
+	powershell Compress-Archive ../xkopac07_xvarga21_xbuday05_xmasle01 ../xkopac07_xvarga21_xbuday05_xmasle01.zip
 
 clean:
-	# powershell Remove-Item ../1.bat -Exclude *.*
+	$srcPath = "."
+	powershell Remove-Item -Include *.exe -Recurse
+	powershell Remove-Item ("$srcPath" + "/Calculator/bin") -Force
+	powershell Remove-Item ("$srcPath" + "/Calculator/obj") -Force
+	powershell Remove-Item ("$srcPath" + "/stddev/bin") -Force
+	powershell Remove-Item ("$srcPath" + "/stddev/obj") -Force
+	# Get-ChildItem | Where-Object Name -Like '*`[*' | ForEach-Object { Remove-Item -LiteralPath $_.Name }
 
 run:
-	./bin/Release/Calculator.exe
+	./Calculator/bin/Release/Calculator.exe
 
 profile:
-	../stddev/bin/Release/stddev.exe < ../stddev/bin/Release/test.txt
+	./stddev/bin/Release/stddev.exe < ./stddev/bin/Release/test.txt > ../profiling/vystup.txt
 
 help:
 	@echo POSTUP URCENY PRE VYVOJARA
