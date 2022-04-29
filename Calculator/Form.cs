@@ -627,21 +627,14 @@ namespace Calculator
         
         private void textBox_Result_TextChanged(object sender, EventArgs e)
         {
-            //changing font size automaticly, based on text width
+            // changing font size gradually
+            if (textBox_Result.Text.Length <= 15)
+            {
+                return;
+            }
+
+            textFontChange = ((float)15 / textBox_Result.Text.Length) * (float)maxFontSize;
             textBox_Result.Font = new Font(textBox_Result.Font.Name, textFontChange);
-
-            Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
-
-            if (s.Width >= ((textBox_Result.Width) - ((s.Width+textFontChange)/ textBox_Result.Text.Length) ) && textFontChange > minFontSize) 
-            {
-                textFontChange -= 2;        //fluently decreasing font size
-            }
-
-            if (s.Width < ((textBox_Result.Width) - maxFontSize)  && textFontChange < maxFontSize)
-            {
-                textFontChange += 2;        //fluently increasing font size
-            }
-
         }
 
         private void textBox_History_TextChanged(object sender, EventArgs e)
