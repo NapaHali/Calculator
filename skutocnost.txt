@@ -1,0 +1,14 @@
+Vyhodnotenie rozdielov medzi plánom a skutoènosou
+Tım: DivideByZeroExeption
+
+Plán:  priebene pracova na projekte
+Skutoènos: pracovalo sa nárazovo, keï bolo viacej èasu alebo tesne pred nami stanovenımi termínmi
+
+Plán:  vısledná a oèakávaná hodnota, ktoré boli pod¾a nás rovnaké -1337,00000000099 =  -1337,00000000099
+Skutoènos: TDD testy nás presvedèili, e nie 
+
+Plán:  design_draft bude ¾ahko vytvorite¾nı s vymyslenou funkcionalitou
+Skutoènos: vymyslenú funkcionalitu nebolo moné na 100% naplni
+
+Plán: Prvotnı dizajn kalkulaèky sa s minimálnymi zmenami premení na finálny dizajn
+Skutoènos:  Tento plán bol prekvapivo naplnenı.
