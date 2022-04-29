@@ -64,6 +64,8 @@ namespace Calculator
             if (!StringOperations.isLastNumeric(formula) && !StringOperations.lastEquals(formula, '!'))
                 return ErrorCode.SyntaxError;
 
+            formula = formula.Replace("+-", "-"); // dangerous
+
             while (formula.Contains('+') || formula.Contains('-') || formula.Contains('*') || formula.Contains('÷') || formula.Contains('!'))
             {
                 if (formula[0] == '-')
