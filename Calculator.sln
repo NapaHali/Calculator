@@ -11,6 +11,8 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calculator_Setup", "src\Set
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stddev", "src\stddev\stddev.csproj", "{BFA0DF89-165A-4CB3-B013-55206820CA4A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "install", "install\install.vdproj", "{4BB241CA-157E-4C88-B8C8-6A14531D1167}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,8 @@ Global
 		{BFA0DF89-165A-4CB3-B013-55206820CA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFA0DF89-165A-4CB3-B013-55206820CA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFA0DF89-165A-4CB3-B013-55206820CA4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB241CA-157E-4C88-B8C8-6A14531D1167}.Debug|Any CPU.ActiveCfg = Debug
+		{4BB241CA-157E-4C88-B8C8-6A14531D1167}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
