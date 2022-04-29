@@ -67,7 +67,7 @@ namespace Calculator
                     }
                     catch
                     {
-                        return ErrorCode.InternalError;
+                        return ErrorCode.OverflowError;
                     }
                     return ErrorCode.Success;
             }
