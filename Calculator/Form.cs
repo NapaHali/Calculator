@@ -222,6 +222,7 @@ namespace Calculator
             calcState = CalculatorState.Normal;
             pointAllowed = true;
             errorDisplay = false;
+            textBox_Result.Font = new Font(textBox_Result.Font.Name, maxFontSize);
         }
 
         private void btnFactorial_Click(object sender, EventArgs e)
