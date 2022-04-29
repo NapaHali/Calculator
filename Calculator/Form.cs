@@ -40,7 +40,6 @@ namespace Calculator
         private int funcEndIndex = 0;
 
         // GUI Variables
-        //private bool maximizeWindow = false;          // bool for maximizing and "demaximizing" calculator window
         private bool dragging = false;                // bool for dragging
         private Point startPoint = new Point(0, 0);   // starting position of calculator window to make it draggable
         float textFontChange = 36;                    // variable for changing font size in textBox_Result
@@ -633,7 +632,7 @@ namespace Calculator
 
             Size s = TextRenderer.MeasureText(textBox_Result.Text, textBox_Result.Font);
 
-            if (s.Width >= ((textBox_Result.Width) - maxFontSize) && textFontChange > minFontSize) 
+            if (s.Width >= ((textBox_Result.Width) - ((s.Width+textFontChange)/ textBox_Result.Text.Length) ) && textFontChange > minFontSize) 
             {
                 textFontChange -= 2;        //fluently decreasing font size
             }
