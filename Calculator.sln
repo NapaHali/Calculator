@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{6E433EE1-B79E-4FA3-9226-8AF369537737}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "src\Calculator\Calculator.csproj", "{6E433EE1-B79E-4FA3-9226-8AF369537737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTests", "MathTests\MathTests.csproj", "{3E0E7E3F-456D-4442-B179-380A904FFC04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTests", "src\MathTests\MathTests.csproj", "{3E0E7E3F-456D-4442-B179-380A904FFC04}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calculator_Setup", "Setup\Setup.vdproj", "{69D76861-3652-49C4-9908-7E44E57FF918}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calculator_Setup", "src\Setup\Setup.vdproj", "{69D76861-3652-49C4-9908-7E44E57FF918}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stddev", "stddev\stddev.csproj", "{BFA0DF89-165A-4CB3-B013-55206820CA4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stddev", "src\stddev\stddev.csproj", "{BFA0DF89-165A-4CB3-B013-55206820CA4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

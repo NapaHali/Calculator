@@ -1,0 +1,27 @@
+Vyhodnotenie rozdielov medzi plánom a skutočnosťou
+Tím: DivideByZeroException
+
+Plán: Priebežne pracovať na projekte
+Skutočnosť: vývoj neprebiehal plynulo pomocou iteračných šprintov ako bolo myslené z hľadiska veľkého nátlaku ostatných povinných predmetov
+
+Plán: Výsledná a očakávaná hodnota, ktoré boli podľa nás rovnaké -1337,00000000099 = -1337,00000000099
+Skutočnosť: TDD testy nás presvedčili, že FPU funguje inak ako sme si mysleli
+
+Plán: Design draft bude ľahko vytvoriteľný s dopredu premyslenou funkcionalitou
+Skutočnosť: premyslenú funkcionalitu nebolo možné na 100% splniť
+
+Plán: Prvotný dizajn kalkulačky sa s minimálnymi zmenami premení na finálny dizajn
+Skutočnosť: Tento plán bol prekvapivo splnený
+
+Plán: Matematická knižnica bude jednoduchá
+Skutočnosť: Funkcie ako Power, Root a Factorial boli komplikovanejšie ako sme očakávali
+
+Plán: Podarí sa nám vytvoriť komplexnú kalkulačku
+Skutočnosť: Do istej úrovne sa nám podarilo vytvoriť kalkulačku ktorá je rozšírená, i keď veľký problém robili chýbajúce zátvorky v implementácii
+
+Plán: Dohodnúť sa vopred na špecifikácii
+Skutočnosť: V strede projektu sme museli znovu premyslieť implementácie funkcií Root, Power a Absolute value v kalkulačke
+
+Plán: Git nám pomôže vyhnúť sa konfliktom v jednotlivých verziách
+Skutočnosť: Git bol užitočný pri version control, i keď sa občas vyskytli problémy, hlavne kvôli neskúsenosti
+
