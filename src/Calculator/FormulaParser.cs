@@ -88,7 +88,7 @@ namespace Calculator
             if (!StringOperations.isLastNumeric(formula) && !StringOperations.lastEquals(formula, '!'))
                 return ErrorCode.SyntaxError;
 
-            formula = formula.Replace("+-", "-"); // dangerous
+            formula = formula.Replace("+-", "-");
 
             while (formula.Contains('+') || formula.Contains('-') || formula.Contains('*') || formula.Contains('÷') || formula.Contains('!'))
             {
@@ -176,7 +176,6 @@ namespace Calculator
                     expressionIndexRight = i;
                 }
 
-                // TODO: Globalized decimal point
                 double x = 0; double y = 0;
                 if (!double.TryParse(left, out x)) return ErrorCode.SyntaxError;
                 if (formula[priorityOperationIndex] != '!')

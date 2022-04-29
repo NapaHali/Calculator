@@ -1,0 +1,4 @@
+xkopac07 100 (TDD testy, pomoc na matematickej knižnici, Makefile, Doxygen, Oprava výberovej smerodajnej odchylky, PGO, vedenie tímu)
+xvarga21 100 (Matematická knižnica, UI linker, užívateľskú dokumentáciu, pomoc na vývoji výberovej smerodajnej odchylky, PGO)
+xbuday05 100 (Celý Graphical User Interface, Nápoveda, dizajn mockup-u)
+xmasle01 100 (profiling, inštalátor, odinštalátor)

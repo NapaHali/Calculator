@@ -192,14 +192,14 @@ namespace MathTests
         {
             Assert.AreEqual(2, MathLib.Root(4, 2));
             Assert.AreEqual(2, MathLib.Root(8, 3));
-            Assert.AreEqual(-1.2599210498, MathLib.Root(-2, 3), 0.00000000001);
-            Assert.AreEqual(-1.5157165665, MathLib.Root(-8, 5), 0.00000000001);
+            Assert.AreEqual(-1.2599210498, MathLib.Root(-2, 3), 0.000000000099);
+            Assert.AreEqual(-1.5157165665, MathLib.Root(-8, 5), 0.00000000002);
 
             for (int i = 0; i < 8; i++)
             {
                 if(i % 2 == 0)
                 {
-                    Assert.ThrowsException<ArithmeticException>(() => MathLib.Root(-1, i), "Invalid root!");
+                    Assert.AreEqual(double.NaN, MathLib.Root(-1, i));
                 } else
                 {
                     Assert.AreEqual(-1, MathLib.Root(-1, i));

@@ -3,7 +3,7 @@
 all: run
 
 pack:
-	powershell Compress-Archive ../xkopac07_xvarga21_xbuday05_xmasle01 ../xkopac07_xvarga21_xbuday05_xmasle01.zip
+	powershell Compress-Archive ../../xkopac07_xvarga21_xbuday05_xmasle01 ../../xkopac07_xvarga21_xbuday05_xmasle01.zip
 
 clean:
 	$srcPath = "."

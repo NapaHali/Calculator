@@ -127,7 +127,7 @@
     <value>True</value>
   </metadata>
   <data name="label2.Text" xml:space="preserve">
-    <value>tlačítko  funkcie- klávesa - spôsob použitia, pokiaľ sa líši od klasického použitia
+    <value>tlačítko  funkcie - klávesa - spôsob použitia, pokiaľ sa líši od klasického použitia
 
 ?         Help   - H
 del      Vymaže posledný vložený znak - delete, backspace
@@ -154,7 +154,7 @@ x^y     X umocnené na Y -P- zadať X stlačiť tlačidlo a následne zadať Y
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA88AAALhCAYAAABhWpYxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAA7
-        ggAAO4IBMvKiZwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC3NSURBVHhe7d0H
+        gQAAO4EBn0uDCgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC3NSURBVHhe7d0H
         2GxXWTZgzzlppIcQAqFDIBQpAfLTi/QOirFFBOlNAUGK+mNQkKCABgUFBQQUMSBFUISIoBTz00F6k0AI
         PYH0zv+svV8khpyctmdmzcx9X9dzxfN98+317rWOXOs9M99ePwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
