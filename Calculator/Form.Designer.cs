@@ -383,18 +383,19 @@
             // btnMinimize
             // 
             resources.ApplyResources(this.btnMinimize, "btnMinimize");
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnMinimize.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.btnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnExit
             // 
             resources.ApplyResources(this.btnExit, "btnExit");
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
