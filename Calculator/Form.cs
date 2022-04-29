@@ -55,20 +55,17 @@ namespace Calculator
         {
             switch (code)
             {
+                case ErrorCode.InvalidPowerY:
+                case ErrorCode.InvalidRootY:
                 case ErrorCode.SyntaxError:
                     return "Syntax error.";
+                case ErrorCode.InvalidFactorial:
                 case ErrorCode.MathError:
                     return "Math error.";
                 case ErrorCode.OverflowError:
                     return "Overflow error.";
                 case ErrorCode.DivideByZeroError:
                     return "Can't divide by zero.";
-                case ErrorCode.InvalidRootY:
-                    return "Root Y must be whole number.";
-                case ErrorCode.InvalidPowerY:
-                    return "Power Y must be whole number.";
-                case ErrorCode.InvalidFactorial:
-                    return "Invalid factorial.";
                 default:
                     return "Internal error.";
             }
@@ -245,7 +242,7 @@ namespace Calculator
             if (textBox_Result.Text.Length < maximalInput - 6 && !errorDisplay) // maximalInput - 6 to make space for root function parentheses
             {
                 string text = textBox_Result.Text;
-                if (!StringOperations.isLastNumeric(text) || calcState != CalculatorState.Normal)
+                if ((!StringOperations.isLastNumeric(text) && !StringOperations.lastEquals(text, '!')) || calcState != CalculatorState.Normal)
                 {
                     return;
                 }
@@ -262,7 +259,7 @@ namespace Calculator
             if (textBox_Result.Text.Length < maximalInput - 5 && !errorDisplay) // maximalInput - 5 to make space for power function parentheses
             {
                 string text = textBox_Result.Text;
-                if (!StringOperations.isLastNumeric(text) || calcState != CalculatorState.Normal)
+                if ((!StringOperations.isLastNumeric(text) && !StringOperations.lastEquals(text, '!')) || calcState != CalculatorState.Normal)
                 {
                     return;
                 }
@@ -309,7 +306,7 @@ namespace Calculator
             if (textBox_Result.Text.Length < maximalInput - 2 && !errorDisplay) // maximalInput - 2 to make space for the abs function parentheses
             {
                 string text = textBox_Result.Text;
-                if (!StringOperations.isLastNumeric(text) || calcState != CalculatorState.Normal)
+                if ((!StringOperations.isLastNumeric(text) && !StringOperations.lastEquals(text, '!')) || calcState != CalculatorState.Normal)
                 {
                     return;
                 }
