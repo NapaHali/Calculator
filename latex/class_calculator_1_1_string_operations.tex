@@ -1,0 +1,83 @@
+\hypertarget{class_calculator_1_1_string_operations}{}\doxysection{Calculator.\+String\+Operations Class Reference}
+\label{class_calculator_1_1_string_operations}\index{Calculator.StringOperations@{Calculator.StringOperations}}
+
+
+\mbox{\hyperlink{class_calculator_1_1_string_operations}{String\+Operations}} class used to determine whether we caught a number in specified place in the string  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_calculator_1_1_string_operations_a2d0a6bd87d2671a1b2bd76be95242df4}{is\+Numeric}} (char ch)
+\begin{DoxyCompactList}\small\item\em Tries to parse the string into integer format \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_calculator_1_1_string_operations_a1e67e47b036131229aab4281e170a25d}{is\+Last\+Numeric}} (string text)
+\begin{DoxyCompactList}\small\item\em Checks whether the last character in string is a number \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_calculator_1_1_string_operations_a68eb8f503de3ff7db0e95f6bc7cb7c97}{last\+Equals}} (string text, char ch)
+\begin{DoxyCompactList}\small\item\em Evaluates if the string\textquotesingle{}s last character equals to the given character as a second parameter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_calculator_1_1_string_operations}{String\+Operations}} class used to determine whether we caught a number in specified place in the string 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_calculator_1_1_string_operations_a1e67e47b036131229aab4281e170a25d}\label{class_calculator_1_1_string_operations_a1e67e47b036131229aab4281e170a25d}} 
+\index{Calculator.StringOperations@{Calculator.StringOperations}!isLastNumeric@{isLastNumeric}}
+\index{isLastNumeric@{isLastNumeric}!Calculator.StringOperations@{Calculator.StringOperations}}
+\doxysubsubsection{\texorpdfstring{isLastNumeric()}{isLastNumeric()}}
+{\footnotesize\ttfamily static bool Calculator.\+String\+Operations.\+is\+Last\+Numeric (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks whether the last character in string is a number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String where should the last character be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the last character is a number, false otherwise
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_calculator_1_1_string_operations_a2d0a6bd87d2671a1b2bd76be95242df4}\label{class_calculator_1_1_string_operations_a2d0a6bd87d2671a1b2bd76be95242df4}} 
+\index{Calculator.StringOperations@{Calculator.StringOperations}!isNumeric@{isNumeric}}
+\index{isNumeric@{isNumeric}!Calculator.StringOperations@{Calculator.StringOperations}}
+\doxysubsubsection{\texorpdfstring{isNumeric()}{isNumeric()}}
+{\footnotesize\ttfamily static bool Calculator.\+String\+Operations.\+is\+Numeric (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tries to parse the string into integer format 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & Character to be parsed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the string is number, false otherwise
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_calculator_1_1_string_operations_a68eb8f503de3ff7db0e95f6bc7cb7c97}\label{class_calculator_1_1_string_operations_a68eb8f503de3ff7db0e95f6bc7cb7c97}} 
+\index{Calculator.StringOperations@{Calculator.StringOperations}!lastEquals@{lastEquals}}
+\index{lastEquals@{lastEquals}!Calculator.StringOperations@{Calculator.StringOperations}}
+\doxysubsubsection{\texorpdfstring{lastEquals()}{lastEquals()}}
+{\footnotesize\ttfamily static bool Calculator.\+String\+Operations.\+last\+Equals (\begin{DoxyParamCaption}\item[{string}]{text,  }\item[{char}]{ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Evaluates if the string\textquotesingle{}s last character equals to the given character as a second parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String where should the last character be checked\\
+\hline
+{\em ch} & Character to look for in the string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if last character in string equals the given character, false otherwise
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Calculator/String\+Operations.\+cs\end{DoxyCompactItemize}

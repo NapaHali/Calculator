@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_0',['Main',['../class_calculator_1_1_program.html#a4f737dec6ef41c5cdb85b5d33c347c31',1,'Calculator.Program.Main()'],['../class_profiler_1_1_program.html#ad6b6c2122c22a0108d2fdf25f3fb5b8d',1,'Profiler.Program.Main()']]],
-  ['multiply_1',['Multiply',['../class_math_tests_1_1_operations_tests.html#a4dbc12b7ad463ae8b80842ac705b5704',1,'MathTests::OperationsTests']]]
+  ['factorial_0',['Factorial',['../class_calculator_1_1_math_lib.html#af742198ba4e3a1ed0738641a0303a2f5',1,'Calculator.MathLib.Factorial()'],['../class_math_tests_1_1_operations_tests.html#a3bc6df5e1eed347d1eb89c86380a1830',1,'MathTests.OperationsTests.Factorial()']]],
+  ['formulaparser_1',['FormulaParser',['../class_calculator_1_1_formula_parser.html#abfc471796550814d894307dfa433bb47',1,'Calculator::FormulaParser']]]
 ];

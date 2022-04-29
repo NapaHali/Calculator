@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mathlib_0',['MathLib',['../class_calculator_1_1_math_lib.html',1,'Calculator']]]
+  ['helpform_0',['HelpForm',['../class_calculator_1_1_help_form.html',1,'Calculator']]]
 ];

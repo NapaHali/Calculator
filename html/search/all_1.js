@@ -1,7 +1,28 @@
 var searchData=
 [
-  ['calculator_0',['Calculator',['../namespace_calculator.html',1,'Calculator'],['../class_calculator_1_1_calculator.html',1,'Calculator.Calculator']]],
-  ['components_1',['components',['../class_calculator_1_1_calculator.html#a172171cda3a58e9d8b09af6be5083390',1,'Calculator.Calculator.components()'],['../class_calculator_1_1_help_form.html#aba3dde827ebf501a04b8d4b595a3e279',1,'Calculator.HelpForm.components()']]],
-  ['culture_2',['Culture',['../class_calculator_1_1_properties_1_1_resources.html#a434d43ed6bb46b9a051e4a4d9483e754',1,'Calculator::Properties::Resources']]],
-  ['properties_3',['Properties',['../namespace_calculator_1_1_properties.html',1,'Calculator']]]
+  ['btn0_5fclick_0',['btn0_Click',['../class_calculator_1_1_calculator.html#a1bf22c5cd2fdb2c44dca3115f4c353e9',1,'Calculator::Calculator']]],
+  ['btn1_5fclick_1',['btn1_Click',['../class_calculator_1_1_calculator.html#ad4159f185cd3e5f46ebe2bbf28156ff7',1,'Calculator::Calculator']]],
+  ['btn2_5fclick_2',['btn2_Click',['../class_calculator_1_1_calculator.html#a74e762c6b782ff90d696848f3a7afc9c',1,'Calculator::Calculator']]],
+  ['btn3_5fclick_3',['btn3_Click',['../class_calculator_1_1_calculator.html#af51a9a27fc000a809eb1fa3271cf07e0',1,'Calculator::Calculator']]],
+  ['btn4_5fclick_4',['btn4_Click',['../class_calculator_1_1_calculator.html#a239a2e50fbbefc209c0624b4bc17bdc3',1,'Calculator::Calculator']]],
+  ['btn5_5fclick_5',['btn5_Click',['../class_calculator_1_1_calculator.html#a9578e0434d0221fe00f734c3f357832e',1,'Calculator::Calculator']]],
+  ['btn6_5fclick_6',['btn6_Click',['../class_calculator_1_1_calculator.html#a88525a3a31f2efd2d85912ed67e5661c',1,'Calculator::Calculator']]],
+  ['btn7_5fclick_7',['btn7_Click',['../class_calculator_1_1_calculator.html#a8b881257ad3303bcb59de00948f71226',1,'Calculator::Calculator']]],
+  ['btn8_5fclick_8',['btn8_Click',['../class_calculator_1_1_calculator.html#acd1f6ced9fcfb550a0b3b1a727118e03',1,'Calculator::Calculator']]],
+  ['btn9_5fclick_9',['btn9_Click',['../class_calculator_1_1_calculator.html#aa4a809034aa5b2058b328364d445bd23',1,'Calculator::Calculator']]],
+  ['btnabs_5fclick_10',['btnAbs_Click',['../class_calculator_1_1_calculator.html#a68298c100dbe0d3bbc72d10f57085f40',1,'Calculator::Calculator']]],
+  ['btnclear_5fclick_11',['btnClear_Click',['../class_calculator_1_1_calculator.html#a2635691bef669bdcfef8fd80a6dbd454',1,'Calculator::Calculator']]],
+  ['btndelete_5fclick_12',['btnDelete_Click',['../class_calculator_1_1_calculator.html#ad519abdb61780b09dbf69c44554eb8b9',1,'Calculator::Calculator']]],
+  ['btndivide_5fclick_13',['btnDivide_Click',['../class_calculator_1_1_calculator.html#ab5f35bbd9d11dbcf7aede9342bf8609a',1,'Calculator::Calculator']]],
+  ['btnequals_5fclick_14',['btnEquals_Click',['../class_calculator_1_1_calculator.html#aea694bfaa363759da371e48140c16a07',1,'Calculator::Calculator']]],
+  ['btnexit_5fclick_15',['btnExit_Click',['../class_calculator_1_1_calculator.html#a725139f41fe5ace1b5b7b5992da55bad',1,'Calculator.Calculator.btnExit_Click()'],['../class_calculator_1_1_help_form.html#ac97956aafb5f0cc30377a67ebc93692c',1,'Calculator.HelpForm.btnExit_Click()']]],
+  ['btnfactorial_5fclick_16',['btnFactorial_Click',['../class_calculator_1_1_calculator.html#ad0c3e66f49d74aba2a6b82d5a9f9f864',1,'Calculator::Calculator']]],
+  ['btnhelp_5fclick_17',['btnHelp_Click',['../class_calculator_1_1_calculator.html#a2542020fdcf0debca04fc9d20df2b935',1,'Calculator::Calculator']]],
+  ['btnminimize_5fclick_18',['btnMinimize_Click',['../class_calculator_1_1_calculator.html#a052368a83b7314cc00cbe5db68000eed',1,'Calculator::Calculator']]],
+  ['btnminus_5fclick_19',['btnMinus_Click',['../class_calculator_1_1_calculator.html#a998be5aa3c31f09812100aea3b44ab91',1,'Calculator::Calculator']]],
+  ['btnmultiply_5fclick_20',['btnMultiply_Click',['../class_calculator_1_1_calculator.html#a323dfc6e591b8fc9f04e6f568ce4628c',1,'Calculator::Calculator']]],
+  ['btnplus_5fclick_21',['btnPlus_Click',['../class_calculator_1_1_calculator.html#ac0c51c434d20d7e9acc2ee4c8172d03e',1,'Calculator::Calculator']]],
+  ['btnpoint_5fclick_22',['btnPoint_Click',['../class_calculator_1_1_calculator.html#a94ccaac88fe9e7e683689a8c24e6a049',1,'Calculator::Calculator']]],
+  ['btnpower_5fclick_23',['btnPower_Click',['../class_calculator_1_1_calculator.html#aaa73e349d4a8051274368bd337d2215d',1,'Calculator::Calculator']]],
+  ['btnroot_5fclick_24',['btnRoot_Click',['../class_calculator_1_1_calculator.html#aa2fd366d4c502967b09a1952051e2022',1,'Calculator::Calculator']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resources_0',['Resources',['../class_calculator_1_1_properties_1_1_resources.html',1,'Calculator::Properties']]]
+  ['program_0',['Program',['../class_calculator_1_1_program.html',1,'Calculator.Program'],['../class_profiler_1_1_program.html',1,'Profiler.Program']]]
 ];

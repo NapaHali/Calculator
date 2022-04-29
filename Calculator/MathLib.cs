@@ -39,7 +39,7 @@ namespace Calculator
         /// </summary>
         /// <param name="x">First value</param>
         /// <param name="y">Second value</param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double Multiply(double x, double y)
         {
             return x*y;

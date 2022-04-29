@@ -482,7 +482,7 @@ namespace Calculator
         }
 
         /// <summary>
-        /// Button element that sends the formula into the formulaparser class which evaluates the equation <see cref=">FormulaParser.cs"/> 
+        /// Button element that sends the formula into the formulaparser class which evaluates the equation <see cref="FormulaParser"/>
         /// </summary>
         /// <param name="sender">Object that caused the click event to fire</param>
         /// <param name="e">Event argument data passed to this function</param>
