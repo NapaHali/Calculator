@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operationstests_0',['OperationsTests',['../class_math_tests_1_1_operations_tests.html',1,'MathTests']]]
+  ['mathlib_0',['MathLib',['../class_calculator_1_1_math_lib.html',1,'Calculator']]]
 ];

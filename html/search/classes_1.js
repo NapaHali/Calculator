@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['helpform_0',['HelpForm',['../class_calculator_1_1_help_form.html',1,'Calculator']]]
+  ['formulaparser_0',['FormulaParser',['../class_calculator_1_1_formula_parser.html',1,'Calculator']]]
 ];

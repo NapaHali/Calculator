@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Calculator")]
-[assembly: AssemblyDescription("Simple calculator created for team project management")]
+[assembly: AssemblyDescription("Calculator created for team project management")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("DivideByZeroException")]
 [assembly: AssemblyProduct("Calculator")]

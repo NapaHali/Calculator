@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getdecimalplaces_0',['GetDecimalPlaces',['../class_math_tests_1_1_operations_tests.html#aff18f4b120f786b528262c1d9887062f',1,'MathTests::OperationsTests']]]
+  ['errormessage_0',['ErrorMessage',['../class_calculator_1_1_calculator.html#a8db8e14c97d47371b2ca7dea73f67b12',1,'Calculator::Calculator']]]
 ];

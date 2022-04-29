@@ -1,11 +1,28 @@
 \hypertarget{class_calculator_1_1_calculator}{}\doxysection{Calculator.\+Calculator Class Reference}
 \label{class_calculator_1_1_calculator}\index{Calculator.Calculator@{Calculator.Calculator}}
+
+
+\mbox{\hyperlink{class_calculator_1_1_calculator}{Calculator}} class that inherits from Form class  
+
+
 Inheritance diagram for Calculator.\+Calculator\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_calculator_1_1_calculator}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculator_1_1_calculator_aa72cf05504c1b967ae441436c61e8b63}\label{class_calculator_1_1_calculator_aa72cf05504c1b967ae441436c61e8b63}} 
+{\bfseries Calculator} ()
+\begin{DoxyCompactList}\small\item\em Constructor that initializes all GUI components \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a9ed0164701cc2404f0d7307336d3d2cf}\label{class_calculator_1_1_calculator_a9ed0164701cc2404f0d7307336d3d2cf}} 
+static bool {\bfseries help\+Page\+Open} = false
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,122 +31,80 @@ override void \mbox{\hyperlink{class_calculator_1_1_calculator_ae55330781de7eeb8
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_acb6c67b146472dd48ea8948cbbc2fc7a}\label{class_calculator_1_1_calculator_acb6c67b146472dd48ea8948cbbc2fc7a}} 
-bool {\bfseries is\+Numeric} (char ch)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_afceb54de82080a10224e5df17613a0da}\label{class_calculator_1_1_calculator_afceb54de82080a10224e5df17613a0da}} 
-bool {\bfseries is\+Last\+Numeric} (string text)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_accf2df948cdf8c824a9a60ab06bca34e}\label{class_calculator_1_1_calculator_accf2df948cdf8c824a9a60ab06bca34e}} 
-double {\bfseries Perform\+Operation} (char opchar, double x, double y=0)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a39635e1661d72e4b7e1b7ad99e5dc0ab}\label{class_calculator_1_1_calculator_a39635e1661d72e4b7e1b7ad99e5dc0ab}} 
-void {\bfseries Calculator\+\_\+\+Load} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a3f1d4e9d2588cbf9cacc5414a50a4324}\label{class_calculator_1_1_calculator_a3f1d4e9d2588cbf9cacc5414a50a4324}} 
-void {\bfseries Calculator\+\_\+\+Key\+Down} (object sender, Key\+Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a2542020fdcf0debca04fc9d20df2b935}\label{class_calculator_1_1_calculator_a2542020fdcf0debca04fc9d20df2b935}} 
-void {\bfseries btn\+Help\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ad519abdb61780b09dbf69c44554eb8b9}\label{class_calculator_1_1_calculator_ad519abdb61780b09dbf69c44554eb8b9}} 
-void {\bfseries btn\+Delete\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a2635691bef669bdcfef8fd80a6dbd454}\label{class_calculator_1_1_calculator_a2635691bef669bdcfef8fd80a6dbd454}} 
-void {\bfseries btn\+Clear\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ad0c3e66f49d74aba2a6b82d5a9f9f864}\label{class_calculator_1_1_calculator_ad0c3e66f49d74aba2a6b82d5a9f9f864}} 
-void {\bfseries btn\+Factorial\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_aa2fd366d4c502967b09a1952051e2022}\label{class_calculator_1_1_calculator_aa2fd366d4c502967b09a1952051e2022}} 
-void {\bfseries btn\+Root\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_aaa73e349d4a8051274368bd337d2215d}\label{class_calculator_1_1_calculator_aaa73e349d4a8051274368bd337d2215d}} 
-void {\bfseries btn\+Power\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ab5f35bbd9d11dbcf7aede9342bf8609a}\label{class_calculator_1_1_calculator_ab5f35bbd9d11dbcf7aede9342bf8609a}} 
-void {\bfseries btn\+Divide\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a323dfc6e591b8fc9f04e6f568ce4628c}\label{class_calculator_1_1_calculator_a323dfc6e591b8fc9f04e6f568ce4628c}} 
-void {\bfseries btn\+Multiply\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a68298c100dbe0d3bbc72d10f57085f40}\label{class_calculator_1_1_calculator_a68298c100dbe0d3bbc72d10f57085f40}} 
-void {\bfseries btn\+Abs\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a998be5aa3c31f09812100aea3b44ab91}\label{class_calculator_1_1_calculator_a998be5aa3c31f09812100aea3b44ab91}} 
-void {\bfseries btn\+Minus\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ac0c51c434d20d7e9acc2ee4c8172d03e}\label{class_calculator_1_1_calculator_ac0c51c434d20d7e9acc2ee4c8172d03e}} 
-void {\bfseries btn\+Plus\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a94ccaac88fe9e7e683689a8c24e6a049}\label{class_calculator_1_1_calculator_a94ccaac88fe9e7e683689a8c24e6a049}} 
-void {\bfseries btn\+Point\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_aea694bfaa363759da371e48140c16a07}\label{class_calculator_1_1_calculator_aea694bfaa363759da371e48140c16a07}} 
-void {\bfseries btn\+Equals\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a1bf22c5cd2fdb2c44dca3115f4c353e9}\label{class_calculator_1_1_calculator_a1bf22c5cd2fdb2c44dca3115f4c353e9}} 
-void {\bfseries btn0\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ad4159f185cd3e5f46ebe2bbf28156ff7}\label{class_calculator_1_1_calculator_ad4159f185cd3e5f46ebe2bbf28156ff7}} 
-void {\bfseries btn1\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a74e762c6b782ff90d696848f3a7afc9c}\label{class_calculator_1_1_calculator_a74e762c6b782ff90d696848f3a7afc9c}} 
-void {\bfseries btn2\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_af51a9a27fc000a809eb1fa3271cf07e0}\label{class_calculator_1_1_calculator_af51a9a27fc000a809eb1fa3271cf07e0}} 
-void {\bfseries btn3\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a239a2e50fbbefc209c0624b4bc17bdc3}\label{class_calculator_1_1_calculator_a239a2e50fbbefc209c0624b4bc17bdc3}} 
-void {\bfseries btn4\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a9578e0434d0221fe00f734c3f357832e}\label{class_calculator_1_1_calculator_a9578e0434d0221fe00f734c3f357832e}} 
-void {\bfseries btn5\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a88525a3a31f2efd2d85912ed67e5661c}\label{class_calculator_1_1_calculator_a88525a3a31f2efd2d85912ed67e5661c}} 
-void {\bfseries btn6\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a8b881257ad3303bcb59de00948f71226}\label{class_calculator_1_1_calculator_a8b881257ad3303bcb59de00948f71226}} 
-void {\bfseries btn7\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_acd1f6ced9fcfb550a0b3b1a727118e03}\label{class_calculator_1_1_calculator_acd1f6ced9fcfb550a0b3b1a727118e03}} 
-void {\bfseries btn8\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_aa4a809034aa5b2058b328364d445bd23}\label{class_calculator_1_1_calculator_aa4a809034aa5b2058b328364d445bd23}} 
-void {\bfseries btn9\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a725139f41fe5ace1b5b7b5992da55bad}\label{class_calculator_1_1_calculator_a725139f41fe5ace1b5b7b5992da55bad}} 
-void {\bfseries btn\+Exit\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a052368a83b7314cc00cbe5db68000eed}\label{class_calculator_1_1_calculator_a052368a83b7314cc00cbe5db68000eed}} 
-void {\bfseries btn\+Minimize\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a3e0268be67567e35ce846b960d0c302a}\label{class_calculator_1_1_calculator_a3e0268be67567e35ce846b960d0c302a}} 
-void {\bfseries btn\+Maximize\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a2f961fb3480edff2620aae88b865adc2}\label{class_calculator_1_1_calculator_a2f961fb3480edff2620aae88b865adc2}} 
-void {\bfseries Calculator\+\_\+\+Mouse\+Down} (object sender, Mouse\+Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_af3572d9663f08a950fb5ac6377d229af}\label{class_calculator_1_1_calculator_af3572d9663f08a950fb5ac6377d229af}} 
-void {\bfseries Calculator\+\_\+\+Move\+Up} (object sender, Mouse\+Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_adf75ab0b1dc98dbadc2b47ea9fcab577}\label{class_calculator_1_1_calculator_adf75ab0b1dc98dbadc2b47ea9fcab577}} 
-void {\bfseries Calculator\+\_\+\+Mouse\+Move} (object sender, Mouse\+Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ac1a4db8f66848444faf79d0d5146b8dc}\label{class_calculator_1_1_calculator_ac1a4db8f66848444faf79d0d5146b8dc}} 
-void {\bfseries text\+Box\+\_\+\+Result\+\_\+\+Text\+Changed} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ab2457e2b2698259904c7aa1aa77dd7bd}\label{class_calculator_1_1_calculator_ab2457e2b2698259904c7aa1aa77dd7bd}} 
-void {\bfseries text\+Box\+\_\+\+History\+\_\+\+Text\+Changed} (object sender, Event\+Args e)
-\item 
+string \mbox{\hyperlink{class_calculator_1_1_calculator_a8db8e14c97d47371b2ca7dea73f67b12}{Error\+Message}} (Error\+Code code)
+\begin{DoxyCompactList}\small\item\em Handles error messages and prints them to input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a39635e1661d72e4b7e1b7ad99e5dc0ab}{Calculator\+\_\+\+Load}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Event called when all components have been successfully loaded \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a3f1d4e9d2588cbf9cacc5414a50a4324}{Calculator\+\_\+\+Key\+Down}} (object sender, Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em On\+Key\+Down event that occurs when a key is pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a2542020fdcf0debca04fc9d20df2b935}{btn\+Help\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element used to open \mbox{\hyperlink{class_calculator_1_1_help_form}{Help\+Form}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_ad519abdb61780b09dbf69c44554eb8b9}{btn\+Delete\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that erases last inputted character \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a2635691bef669bdcfef8fd80a6dbd454}{btn\+Clear\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element which clears the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_ad0c3e66f49d74aba2a6b82d5a9f9f864}{btn\+Factorial\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the factorial operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_aa2fd366d4c502967b09a1952051e2022}{btn\+Root\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the root operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_aaa73e349d4a8051274368bd337d2215d}{btn\+Power\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the power operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_ab5f35bbd9d11dbcf7aede9342bf8609a}{btn\+Divide\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the division operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a323dfc6e591b8fc9f04e6f568ce4628c}{btn\+Multiply\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the multiplication operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a68298c100dbe0d3bbc72d10f57085f40}{btn\+Abs\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the absolute value operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a998be5aa3c31f09812100aea3b44ab91}{btn\+Minus\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the difference operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_ac0c51c434d20d7e9acc2ee4c8172d03e}{btn\+Plus\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the sum operator into the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a94ccaac88fe9e7e683689a8c24e6a049}{btn\+Point\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds the floating point to the number \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_aea694bfaa363759da371e48140c16a07}{btn\+Equals\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that sends the formula into the formulaparser class which evaluates the equation \mbox{\hyperlink{class_calculator_1_1_formula_parser}{Formula\+Parser}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a1bf22c5cd2fdb2c44dca3115f4c353e9}{btn0\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 0 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_ad4159f185cd3e5f46ebe2bbf28156ff7}{btn1\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 1 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a74e762c6b782ff90d696848f3a7afc9c}{btn2\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 2 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_af51a9a27fc000a809eb1fa3271cf07e0}{btn3\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 3 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a239a2e50fbbefc209c0624b4bc17bdc3}{btn4\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 4 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a9578e0434d0221fe00f734c3f357832e}{btn5\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 5 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a88525a3a31f2efd2d85912ed67e5661c}{btn6\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 6 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a8b881257ad3303bcb59de00948f71226}{btn7\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 7 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_acd1f6ced9fcfb550a0b3b1a727118e03}{btn8\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 8 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_aa4a809034aa5b2058b328364d445bd23}{btn9\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that adds 9 to the input field \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a725139f41fe5ace1b5b7b5992da55bad}{btn\+Exit\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that exits the application \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a052368a83b7314cc00cbe5db68000eed}{btn\+Minimize\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Button element that minimizes the application \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_a2f961fb3480edff2620aae88b865adc2}{Calculator\+\_\+\+Mouse\+Down}} (object sender, Mouse\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em On\+Mouse\+Down event used to determine when the mouse is being pressed down \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_af3572d9663f08a950fb5ac6377d229af}{Calculator\+\_\+\+Move\+Up}} (object sender, Mouse\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em On\+Mouse\+Up event used to determine when the mouse is not being pressed down \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_adf75ab0b1dc98dbadc2b47ea9fcab577}{Calculator\+\_\+\+Mouse\+Move}} (object sender, Mouse\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em On\+Mouse\+Move event used to determine where should the form move based on the mouse pointer location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_ac1a4db8f66848444faf79d0d5146b8dc}{text\+Box\+\_\+\+Result\+\_\+\+Text\+Changed}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Event that is fired everytime the text\+Box\+\_\+\+Result is changed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_1_1_calculator_ab2457e2b2698259904c7aa1aa77dd7bd}{text\+Box\+\_\+\+History\+\_\+\+Text\+Changed}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em IGNORE -\/ not used \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_calculator_1_1_calculator_a5cd6b7d7467fb039a9dda9b3a570162c}\label{class_calculator_1_1_calculator_a5cd6b7d7467fb039a9dda9b3a570162c}} 
 void {\bfseries Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_a0a4b92a652391cc670d5eb55d837e890}\label{class_calculator_1_1_calculator_a0a4b92a652391cc670d5eb55d837e890}} 
-string {\bfseries formula} = \char`\"{}\char`\"{}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a7c8ccfc308593c67f164b403eec41430}\label{class_calculator_1_1_calculator_a7c8ccfc308593c67f164b403eec41430}} 
+bool {\bfseries error\+Display} = false
 \item 
 \mbox{\Hypertarget{class_calculator_1_1_calculator_a3cb3f4e9c8cd4399ff7eff8bb1d38007}\label{class_calculator_1_1_calculator_a3cb3f4e9c8cd4399ff7eff8bb1d38007}} 
 bool {\bfseries point\+Allowed} = true
@@ -137,14 +112,20 @@ bool {\bfseries point\+Allowed} = true
 \mbox{\Hypertarget{class_calculator_1_1_calculator_af01068c7294b646ecaf338690cdadadb}\label{class_calculator_1_1_calculator_af01068c7294b646ecaf338690cdadadb}} 
 bool {\bfseries point\+Allowed\+Previous} = true
 \item 
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a014ee5be9a183da6e39c667b8bf0e6e8}\label{class_calculator_1_1_calculator_a014ee5be9a183da6e39c667b8bf0e6e8}} 
+Calculator\+State {\bfseries calc\+State} = Calculator\+State.\+Normal
+\item 
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a5239d81c9f23cfb0a4dced6b7e672339}\label{class_calculator_1_1_calculator_a5239d81c9f23cfb0a4dced6b7e672339}} 
+\mbox{\hyperlink{class_calculator_1_1_formula_parser}{Formula\+Parser}} {\bfseries parser} = new \mbox{\hyperlink{class_calculator_1_1_formula_parser}{Formula\+Parser}}()
+\item 
+\mbox{\Hypertarget{class_calculator_1_1_calculator_aeec7e2e299475bebf730fb169fda5c81}\label{class_calculator_1_1_calculator_aeec7e2e299475bebf730fb169fda5c81}} 
+int {\bfseries func\+End\+Index} = 0
+\item 
 \mbox{\Hypertarget{class_calculator_1_1_calculator_a4c727615a1553137e7304f27e9cce2e5}\label{class_calculator_1_1_calculator_a4c727615a1553137e7304f27e9cce2e5}} 
 bool {\bfseries dragging} = false
 \item 
 \mbox{\Hypertarget{class_calculator_1_1_calculator_a19ed008e1c737a22675a28ca9925f180}\label{class_calculator_1_1_calculator_a19ed008e1c737a22675a28ca9925f180}} 
 Point {\bfseries start\+Point} = new Point(0, 0)
-\item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ab211d1e7c57486fae2717d61d6020e5d}\label{class_calculator_1_1_calculator_ab211d1e7c57486fae2717d61d6020e5d}} 
-char\mbox{[}$\,$\mbox{]} {\bfseries priority\+Order} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}÷\textquotesingle{}, \textquotesingle{}$\ast$\textquotesingle{}, \textquotesingle{}+\textquotesingle{}, \textquotesingle{}-\/\textquotesingle{} \}
 \item 
 \mbox{\Hypertarget{class_calculator_1_1_calculator_a6bea709ab78d790d3bde8749431fe9e9}\label{class_calculator_1_1_calculator_a6bea709ab78d790d3bde8749431fe9e9}} 
 float {\bfseries text\+Font\+Change} = 36
@@ -224,9 +205,6 @@ System.\+Windows.\+Forms.\+Button {\bfseries btn\+Help}
 \mbox{\Hypertarget{class_calculator_1_1_calculator_a89e3add505f430f49ed0bc058e430aef}\label{class_calculator_1_1_calculator_a89e3add505f430f49ed0bc058e430aef}} 
 System.\+Windows.\+Forms.\+Button {\bfseries btn\+Minimize}
 \item 
-\mbox{\Hypertarget{class_calculator_1_1_calculator_ad41386ebae871dee014d723a2c0a3ef1}\label{class_calculator_1_1_calculator_ad41386ebae871dee014d723a2c0a3ef1}} 
-System.\+Windows.\+Forms.\+Button {\bfseries btn\+Maximize}
-\item 
 \mbox{\Hypertarget{class_calculator_1_1_calculator_a01179ce2502494424ca097cfa4dad984}\label{class_calculator_1_1_calculator_a01179ce2502494424ca097cfa4dad984}} 
 System.\+Windows.\+Forms.\+Button {\bfseries btn\+Exit}
 \item 
@@ -250,7 +228,520 @@ const int {\bfseries maximal\+Input} = 32
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_calculator_1_1_calculator}{Calculator}} class that inherits from Form class 
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a1bf22c5cd2fdb2c44dca3115f4c353e9}\label{class_calculator_1_1_calculator_a1bf22c5cd2fdb2c44dca3115f4c353e9}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn0\_Click@{btn0\_Click}}
+\index{btn0\_Click@{btn0\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn0\_Click()}{btn0\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn0\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 0 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_ad4159f185cd3e5f46ebe2bbf28156ff7}\label{class_calculator_1_1_calculator_ad4159f185cd3e5f46ebe2bbf28156ff7}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn1\_Click@{btn1\_Click}}
+\index{btn1\_Click@{btn1\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn1\_Click()}{btn1\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn1\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 1 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a74e762c6b782ff90d696848f3a7afc9c}\label{class_calculator_1_1_calculator_a74e762c6b782ff90d696848f3a7afc9c}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn2\_Click@{btn2\_Click}}
+\index{btn2\_Click@{btn2\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn2\_Click()}{btn2\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn2\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 2 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_af51a9a27fc000a809eb1fa3271cf07e0}\label{class_calculator_1_1_calculator_af51a9a27fc000a809eb1fa3271cf07e0}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn3\_Click@{btn3\_Click}}
+\index{btn3\_Click@{btn3\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn3\_Click()}{btn3\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn3\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 3 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a239a2e50fbbefc209c0624b4bc17bdc3}\label{class_calculator_1_1_calculator_a239a2e50fbbefc209c0624b4bc17bdc3}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn4\_Click@{btn4\_Click}}
+\index{btn4\_Click@{btn4\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn4\_Click()}{btn4\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn4\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 4 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a9578e0434d0221fe00f734c3f357832e}\label{class_calculator_1_1_calculator_a9578e0434d0221fe00f734c3f357832e}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn5\_Click@{btn5\_Click}}
+\index{btn5\_Click@{btn5\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn5\_Click()}{btn5\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn5\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 5 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a88525a3a31f2efd2d85912ed67e5661c}\label{class_calculator_1_1_calculator_a88525a3a31f2efd2d85912ed67e5661c}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn6\_Click@{btn6\_Click}}
+\index{btn6\_Click@{btn6\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn6\_Click()}{btn6\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn6\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 6 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a8b881257ad3303bcb59de00948f71226}\label{class_calculator_1_1_calculator_a8b881257ad3303bcb59de00948f71226}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn7\_Click@{btn7\_Click}}
+\index{btn7\_Click@{btn7\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn7\_Click()}{btn7\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn7\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 7 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_acd1f6ced9fcfb550a0b3b1a727118e03}\label{class_calculator_1_1_calculator_acd1f6ced9fcfb550a0b3b1a727118e03}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn8\_Click@{btn8\_Click}}
+\index{btn8\_Click@{btn8\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn8\_Click()}{btn8\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn8\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 8 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_aa4a809034aa5b2058b328364d445bd23}\label{class_calculator_1_1_calculator_aa4a809034aa5b2058b328364d445bd23}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btn9\_Click@{btn9\_Click}}
+\index{btn9\_Click@{btn9\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btn9\_Click()}{btn9\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn9\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds 9 to the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a68298c100dbe0d3bbc72d10f57085f40}\label{class_calculator_1_1_calculator_a68298c100dbe0d3bbc72d10f57085f40}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnAbs\_Click@{btnAbs\_Click}}
+\index{btnAbs\_Click@{btnAbs\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnAbs\_Click()}{btnAbs\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Abs\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the absolute value operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a2635691bef669bdcfef8fd80a6dbd454}\label{class_calculator_1_1_calculator_a2635691bef669bdcfef8fd80a6dbd454}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnClear\_Click@{btnClear\_Click}}
+\index{btnClear\_Click@{btnClear\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnClear\_Click()}{btnClear\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Clear\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element which clears the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_ad519abdb61780b09dbf69c44554eb8b9}\label{class_calculator_1_1_calculator_ad519abdb61780b09dbf69c44554eb8b9}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnDelete\_Click@{btnDelete\_Click}}
+\index{btnDelete\_Click@{btnDelete\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnDelete\_Click()}{btnDelete\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Delete\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that erases last inputted character 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_ab5f35bbd9d11dbcf7aede9342bf8609a}\label{class_calculator_1_1_calculator_ab5f35bbd9d11dbcf7aede9342bf8609a}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnDivide\_Click@{btnDivide\_Click}}
+\index{btnDivide\_Click@{btnDivide\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnDivide\_Click()}{btnDivide\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Divide\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the division operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_aea694bfaa363759da371e48140c16a07}\label{class_calculator_1_1_calculator_aea694bfaa363759da371e48140c16a07}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnEquals\_Click@{btnEquals\_Click}}
+\index{btnEquals\_Click@{btnEquals\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnEquals\_Click()}{btnEquals\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Equals\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that sends the formula into the formulaparser class which evaluates the equation \mbox{\hyperlink{class_calculator_1_1_formula_parser}{Formula\+Parser}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a725139f41fe5ace1b5b7b5992da55bad}\label{class_calculator_1_1_calculator_a725139f41fe5ace1b5b7b5992da55bad}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnExit\_Click@{btnExit\_Click}}
+\index{btnExit\_Click@{btnExit\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnExit\_Click()}{btnExit\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Exit\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that exits the application 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_ad0c3e66f49d74aba2a6b82d5a9f9f864}\label{class_calculator_1_1_calculator_ad0c3e66f49d74aba2a6b82d5a9f9f864}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnFactorial\_Click@{btnFactorial\_Click}}
+\index{btnFactorial\_Click@{btnFactorial\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnFactorial\_Click()}{btnFactorial\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Factorial\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the factorial operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a2542020fdcf0debca04fc9d20df2b935}\label{class_calculator_1_1_calculator_a2542020fdcf0debca04fc9d20df2b935}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnHelp\_Click@{btnHelp\_Click}}
+\index{btnHelp\_Click@{btnHelp\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnHelp\_Click()}{btnHelp\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Help\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element used to open \mbox{\hyperlink{class_calculator_1_1_help_form}{Help\+Form}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a052368a83b7314cc00cbe5db68000eed}\label{class_calculator_1_1_calculator_a052368a83b7314cc00cbe5db68000eed}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnMinimize\_Click@{btnMinimize\_Click}}
+\index{btnMinimize\_Click@{btnMinimize\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnMinimize\_Click()}{btnMinimize\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Minimize\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that minimizes the application 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a998be5aa3c31f09812100aea3b44ab91}\label{class_calculator_1_1_calculator_a998be5aa3c31f09812100aea3b44ab91}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnMinus\_Click@{btnMinus\_Click}}
+\index{btnMinus\_Click@{btnMinus\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnMinus\_Click()}{btnMinus\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Minus\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the difference operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a323dfc6e591b8fc9f04e6f568ce4628c}\label{class_calculator_1_1_calculator_a323dfc6e591b8fc9f04e6f568ce4628c}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnMultiply\_Click@{btnMultiply\_Click}}
+\index{btnMultiply\_Click@{btnMultiply\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnMultiply\_Click()}{btnMultiply\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Multiply\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the multiplication operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_ac0c51c434d20d7e9acc2ee4c8172d03e}\label{class_calculator_1_1_calculator_ac0c51c434d20d7e9acc2ee4c8172d03e}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnPlus\_Click@{btnPlus\_Click}}
+\index{btnPlus\_Click@{btnPlus\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnPlus\_Click()}{btnPlus\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Plus\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the sum operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a94ccaac88fe9e7e683689a8c24e6a049}\label{class_calculator_1_1_calculator_a94ccaac88fe9e7e683689a8c24e6a049}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnPoint\_Click@{btnPoint\_Click}}
+\index{btnPoint\_Click@{btnPoint\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnPoint\_Click()}{btnPoint\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Point\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the floating point to the number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_aaa73e349d4a8051274368bd337d2215d}\label{class_calculator_1_1_calculator_aaa73e349d4a8051274368bd337d2215d}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnPower\_Click@{btnPower\_Click}}
+\index{btnPower\_Click@{btnPower\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnPower\_Click()}{btnPower\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Power\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the power operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_aa2fd366d4c502967b09a1952051e2022}\label{class_calculator_1_1_calculator_aa2fd366d4c502967b09a1952051e2022}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!btnRoot\_Click@{btnRoot\_Click}}
+\index{btnRoot\_Click@{btnRoot\_Click}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{btnRoot\_Click()}{btnRoot\_Click()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+btn\+Root\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button element that adds the root operator into the input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused the click event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a3f1d4e9d2588cbf9cacc5414a50a4324}\label{class_calculator_1_1_calculator_a3f1d4e9d2588cbf9cacc5414a50a4324}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!Calculator\_KeyDown@{Calculator\_KeyDown}}
+\index{Calculator\_KeyDown@{Calculator\_KeyDown}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{Calculator\_KeyDown()}{Calculator\_KeyDown()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+Calculator\+\_\+\+Key\+Down (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+On\+Key\+Down event that occurs when a key is pressed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that causes this event to fire\\
+\hline
+{\em e} & Key event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a39635e1661d72e4b7e1b7ad99e5dc0ab}\label{class_calculator_1_1_calculator_a39635e1661d72e4b7e1b7ad99e5dc0ab}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!Calculator\_Load@{Calculator\_Load}}
+\index{Calculator\_Load@{Calculator\_Load}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{Calculator\_Load()}{Calculator\_Load()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+Calculator\+\_\+\+Load (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event called when all components have been successfully loaded 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that causes this event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a2f961fb3480edff2620aae88b865adc2}\label{class_calculator_1_1_calculator_a2f961fb3480edff2620aae88b865adc2}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!Calculator\_MouseDown@{Calculator\_MouseDown}}
+\index{Calculator\_MouseDown@{Calculator\_MouseDown}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{Calculator\_MouseDown()}{Calculator\_MouseDown()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+Calculator\+\_\+\+Mouse\+Down (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Mouse\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+On\+Mouse\+Down event used to determine when the mouse is being pressed down 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused this event to fire\\
+\hline
+{\em e} & Mouse event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_adf75ab0b1dc98dbadc2b47ea9fcab577}\label{class_calculator_1_1_calculator_adf75ab0b1dc98dbadc2b47ea9fcab577}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!Calculator\_MouseMove@{Calculator\_MouseMove}}
+\index{Calculator\_MouseMove@{Calculator\_MouseMove}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{Calculator\_MouseMove()}{Calculator\_MouseMove()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+Calculator\+\_\+\+Mouse\+Move (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Mouse\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+On\+Mouse\+Move event used to determine where should the form move based on the mouse pointer location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused this event to fire\\
+\hline
+{\em e} & Mouse event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_af3572d9663f08a950fb5ac6377d229af}\label{class_calculator_1_1_calculator_af3572d9663f08a950fb5ac6377d229af}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!Calculator\_MoveUp@{Calculator\_MoveUp}}
+\index{Calculator\_MoveUp@{Calculator\_MoveUp}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{Calculator\_MoveUp()}{Calculator\_MoveUp()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+Calculator\+\_\+\+Move\+Up (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Mouse\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+On\+Mouse\+Up event used to determine when the mouse is not being pressed down 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused this event to fire\\
+\hline
+{\em e} & Mouse event argument data passed to this function\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_calculator_1_1_calculator_ae55330781de7eeb87124193becd11fff}\label{class_calculator_1_1_calculator_ae55330781de7eeb87124193becd11fff}} 
 \index{Calculator.Calculator@{Calculator.Calculator}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!Calculator.Calculator@{Calculator.Calculator}}
@@ -264,6 +755,58 @@ Clean up any resources being used.
 
 \begin{DoxyParams}{Parameters}
 {\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_a8db8e14c97d47371b2ca7dea73f67b12}\label{class_calculator_1_1_calculator_a8db8e14c97d47371b2ca7dea73f67b12}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!ErrorMessage@{ErrorMessage}}
+\index{ErrorMessage@{ErrorMessage}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{ErrorMessage()}{ErrorMessage()}}
+{\footnotesize\ttfamily string Calculator.\+Calculator.\+Error\+Message (\begin{DoxyParamCaption}\item[{Error\+Code}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handles error messages and prints them to input field 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Error\+Code value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error translated to human language
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_ab2457e2b2698259904c7aa1aa77dd7bd}\label{class_calculator_1_1_calculator_ab2457e2b2698259904c7aa1aa77dd7bd}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!textBox\_History\_TextChanged@{textBox\_History\_TextChanged}}
+\index{textBox\_History\_TextChanged@{textBox\_History\_TextChanged}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{textBox\_History\_TextChanged()}{textBox\_History\_TextChanged()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+text\+Box\+\_\+\+History\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+IGNORE -\/ not used 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused this event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calculator_1_1_calculator_ac1a4db8f66848444faf79d0d5146b8dc}\label{class_calculator_1_1_calculator_ac1a4db8f66848444faf79d0d5146b8dc}} 
+\index{Calculator.Calculator@{Calculator.Calculator}!textBox\_Result\_TextChanged@{textBox\_Result\_TextChanged}}
+\index{textBox\_Result\_TextChanged@{textBox\_Result\_TextChanged}!Calculator.Calculator@{Calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{textBox\_Result\_TextChanged()}{textBox\_Result\_TextChanged()}}
+{\footnotesize\ttfamily void Calculator.\+Calculator.\+text\+Box\+\_\+\+Result\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event that is fired everytime the text\+Box\+\_\+\+Result is changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that caused this event to fire\\
+\hline
+{\em e} & Event argument data passed to this function\\
 \hline
 \end{DoxyParams}
 

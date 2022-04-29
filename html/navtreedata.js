@@ -25,7 +25,11 @@
 var NAVTREE =
 [
   [ "Calculator", "index.html", [
-    [ "README", "md__r_e_a_d_m_e.html", null ],
+    [ "IVS - Calculator (project for team management and co-operation)", "md__r_e_a_d_m_e.html", [
+      [ "Prostredi", "md__r_e_a_d_m_e.html#autotoc_md0", null ],
+      [ "Autori", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Licence", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
+    ] ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],

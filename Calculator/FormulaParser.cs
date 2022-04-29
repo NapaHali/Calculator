@@ -5,18 +5,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
 
+/// <summary>
+/// Main namespace of Calculator
+/// </summary>
 namespace Calculator
 {
+    /// <summary>
+    /// FormulaParser class used to parse formula expression from calculator text box input field
+    /// </summary>
     internal class FormulaParser
     {
         public char decimalSeparator { get; private set; }
         private char[] priorityOrder = new char[] { '÷', '*', '-', '+' };
 
+        /// <summary>
+        /// Constructor
+        /// Setting if comma (',') or dot ('.') based on CultureInfo from WinAPI should be used to perform calculations
+        /// </summary>
         public FormulaParser()
         {
             this.decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0];
         }
 
+        /// <summary>
+        /// Performs operation on x and y values based on given operator character
+        /// </summary>
+        /// <param name="opchar">Operator character</param>
+        /// <param name="result">Calculated result will be returned to this parameter</param>
+        /// <param name="x">Lefthand value</param>
+        /// <param name="y">Righthand value</param>
+        /// <returns>ErrorCode enum</returns>
         private ErrorCode PerformOperation(char opchar, out double result, double x, double y = 0)
         {
             result = 0;
@@ -56,6 +74,12 @@ namespace Calculator
             return ErrorCode.InvalidOperation;
         }
 
+        /// <summary>
+        /// Tries to parse a specific string formula from input and returns it in result
+        /// </summary>
+        /// <param name="formula">String returned from calculator input field</param>
+        /// <param name="result">Parsed result will be returned in this parameter</param>
+        /// <returns>ErrorCode.Success on successful parsing, otherwise a specific ErrorCode</returns>
         public ErrorCode Parse(string formula, out double result)
         {
             result = 0;

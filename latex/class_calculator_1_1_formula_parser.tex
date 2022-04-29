@@ -1,0 +1,87 @@
+\hypertarget{class_calculator_1_1_formula_parser}{}\doxysection{Calculator.\+Formula\+Parser Class Reference}
+\label{class_calculator_1_1_formula_parser}\index{Calculator.FormulaParser@{Calculator.FormulaParser}}
+
+
+\mbox{\hyperlink{class_calculator_1_1_formula_parser}{Formula\+Parser}} class used to parse formula expression from calculator text box input field  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculator_1_1_formula_parser_abfc471796550814d894307dfa433bb47}\label{class_calculator_1_1_formula_parser_abfc471796550814d894307dfa433bb47}} 
+{\bfseries Formula\+Parser} ()
+\begin{DoxyCompactList}\small\item\em Constructor Setting if comma (\textquotesingle{},\textquotesingle{}) or dot (\textquotesingle{}.\textquotesingle{}) based on Culture\+Info from Win\+API should be used to perform calculations \end{DoxyCompactList}\item 
+Error\+Code \mbox{\hyperlink{class_calculator_1_1_formula_parser_a03ebbc1ef65ce6fa6afbfaba51e98c5e}{Parse}} (string formula, out double result)
+\begin{DoxyCompactList}\small\item\em Tries to parse a specific string formula from input and returns it in result \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculator_1_1_formula_parser_a15e16dcd09ca6aaea5ca3ca5540af963}\label{class_calculator_1_1_formula_parser_a15e16dcd09ca6aaea5ca3ca5540af963}} 
+char {\bfseries decimal\+Separator}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Error\+Code \mbox{\hyperlink{class_calculator_1_1_formula_parser_a737a39aff8dc0ee7696451d47a7fec54}{Perform\+Operation}} (char opchar, out double result, double x, double y=0)
+\begin{DoxyCompactList}\small\item\em Performs operation on x and y values based on given operator character \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculator_1_1_formula_parser_a150c3b1a2c03d5943385683c913f1bdb}\label{class_calculator_1_1_formula_parser_a150c3b1a2c03d5943385683c913f1bdb}} 
+char\mbox{[}$\,$\mbox{]} {\bfseries priority\+Order} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}÷\textquotesingle{}, \textquotesingle{}$\ast$\textquotesingle{}, \textquotesingle{}-\/\textquotesingle{}, \textquotesingle{}+\textquotesingle{} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_calculator_1_1_formula_parser}{Formula\+Parser}} class used to parse formula expression from calculator text box input field 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_calculator_1_1_formula_parser_a03ebbc1ef65ce6fa6afbfaba51e98c5e}\label{class_calculator_1_1_formula_parser_a03ebbc1ef65ce6fa6afbfaba51e98c5e}} 
+\index{Calculator.FormulaParser@{Calculator.FormulaParser}!Parse@{Parse}}
+\index{Parse@{Parse}!Calculator.FormulaParser@{Calculator.FormulaParser}}
+\doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily Error\+Code Calculator.\+Formula\+Parser.\+Parse (\begin{DoxyParamCaption}\item[{string}]{formula,  }\item[{out double}]{result }\end{DoxyParamCaption})}
+
+
+
+Tries to parse a specific string formula from input and returns it in result 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & String returned from calculator input field\\
+\hline
+{\em result} & Parsed result will be returned in this parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code.\+Success on successful parsing, otherwise a specific Error\+Code
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_calculator_1_1_formula_parser_a737a39aff8dc0ee7696451d47a7fec54}\label{class_calculator_1_1_formula_parser_a737a39aff8dc0ee7696451d47a7fec54}} 
+\index{Calculator.FormulaParser@{Calculator.FormulaParser}!PerformOperation@{PerformOperation}}
+\index{PerformOperation@{PerformOperation}!Calculator.FormulaParser@{Calculator.FormulaParser}}
+\doxysubsubsection{\texorpdfstring{PerformOperation()}{PerformOperation()}}
+{\footnotesize\ttfamily Error\+Code Calculator.\+Formula\+Parser.\+Perform\+Operation (\begin{DoxyParamCaption}\item[{char}]{opchar,  }\item[{out double}]{result,  }\item[{double}]{x,  }\item[{double}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Performs operation on x and y values based on given operator character 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opchar} & Operator character\\
+\hline
+{\em result} & Calculated result will be returned to this parameter\\
+\hline
+{\em x} & Lefthand value\\
+\hline
+{\em y} & Righthand value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code enum
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Calculator/Formula\+Parser.\+cs\end{DoxyCompactItemize}
